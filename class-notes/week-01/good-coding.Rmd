@@ -1,0 +1,366 @@
+---
+title: "Good Coding Practices"
+author: 
+- "Olivia Beck" 
+date: "August 24, 2022"
+output: 
+  slidy_presentation: default
+  html_notebook: default
+---
+<style type="text/css">
+  body{
+  font-family: Helvetica;
+  font-size: 12pt;
+}
+</style>
+
+
+
+## Ethical Programming  
+
+
+<center> 
+
+"Ethical programming includes being honest about
+the extent to which you can be confident that your program is
+good, and adhering to quality control processes that ensure that
+if a mistake has been made – everybody makes mistakes – it is
+found and rectified before it causes harm."
+
+
+-PERDITA STEVENS
+
+</center>
+
+## Good programs.... 
+
+- do what they are supposed to do 
+
+- are clearly written 
+
+  - Your code must be readable 
+  
+  - Use comments! 
+
+- do not cause harm 
+
+
+## R Terminology 
+
+- **R** is the programming language.
+
+- **Rstudio** is a user interface to R that makes it easier to document your work, access nice features of R, and more.
+
+  - You do not need Rstudio to use R, but it does make it much easier
+    
+- **CRAN** is a repository where the latest downloads of R (and legacy versions) are found in addition to source code for thousands of different user contributed R packages.
+
+- **Markdown** is a lightweight markup language that you can use to add formatting elements to plaintext text documents
+
+  - **LaTeX** is a document preparation system for high-quality typesetting. LaTeX and Markdown work seamlessly together
+
+- **RMarkdown** is integrating R and Markdown into one document
+
+  - You can render RMarkdown documents into pdf's, HTML, Word doc's, beamer's, slidy's, RNotebook's
+
+- **Packages** are collections of R functions, data, and compiled code in a well-defined format.
+
+  - Packages need to be installed only once: `install.packages()`
+  
+  - Some packages are installed with R automatically:  `stats`, `graphics`, `grDevices`, `utils`, `datasets`, `methods`, `base`
+  
+  - All other packages need to be installed 
+
+- **Libraries** are the directories where the packages are stored on your computer
+
+  - Libraries need to be loaded every time you need them at the beginning of your script with `library()`
+  
+  - Every time you install a package, you also need to load the library
+  
+  - There is a way to access a function inside a package without loading it with package_name::function_name (this is more advanced and we will discuss it later)
+  
+  
+## File Extensions 
+
+- **.R** is an R script
+
+- **.Rmd** is a Rmarkdown document 
+
+  - The raw Rmarkdown document will have extension .Rmd
+  
+  - The rendered document will have the appropriate extension 
+  
+ - | File Type | Extension | 
+| --------- | ----------| 
+| PDF | .pdf| 
+| Beamer | .pdf| 
+| HTML | .html| 
+| Slidy | .html| 
+| Rnotebook | .nb.html|
+| Word doc | .docx |
+
+
+## Good Coding Practices 
+
+- Anything you name should be meaningful. This includes file names, function names, variable names, etc. 
+
+Let's look at the `iris` data set:
+
+```{r}
+head(iris)
+
+# Good 
+dat <- iris
+# get the 2 columns that have "petal" in their names 
+dat.petal <- dat[ , c("Petal.Length", "Petal.Width") ] 
+
+greater.than.1 <- function(x){
+  return(x>1)
+}
+
+# Bad
+x <- iris 
+z <- dat$Petal.Width
+
+f <- function(x){
+  return(x>1)
+}
+
+```
+
+- Use "<-" (assign) not "=" (equals) when assigning variable/function values 
+
+  - In R, "<-" is used to assign variable/function names and "=" is used inside functions for arguments 
+
+```{r}
+# Good 
+x <- 1:5
+quants.good <- quantile(x, probs = c(0.1, 0.9))
+
+# Bad 
+x = 1:5
+quants.bad = quantile(x, probs = c(0.1, 0.9))
+```
+
+
+- NEVER use spaces to name thing 
+
+  - file paths/names should use "-". e.g. file-name.R
+   
+  - function names should use "_". e.g. `funciton_name()`
+  
+  - variable names should use "." e.g. `variable.name` 
+
+- Use lower case letters when possible 
+
+  - good: file-name.R
+  
+  - bad: File-Name.R
+
+- Avoid using base R functions as variable/function names 
+
+```{r, eval = F}
+# BAD
+T <- 14
+
+c <- 10 
+
+mean <- FALSE
+```
+
+- Liberally use comments 
+
+```{r}
+# this is a function to determine if a number is greater than 1
+greater.than.1 <- function(x){
+  return(x>1)
+}
+```
+
+
+## Using Spaces 
+
+- Place spaces around all infix operators (=, +, -, <-, etc.). The same rule applies when using = in function calls. Always put a space after a comma, and never before (just like in regular English).
+  
+```{r, eval = F}
+# Good
+average <- mean(feet / 12 + inches, na.rm = TRUE)
+
+# Bad
+average<-mean(feet/12+inches,na.rm=TRUE)
+```
+  
+- There are 2 small exceptions:
+  
+1.  :, :: and ::: can't have spaces around them.
+  
+```{r, eval = F}
+# Good
+x <- 1:10
+base::get
+
+# Bad
+x <- 1 : 10
+base :: get
+```
+  
+2. Place a space before left parentheses, except in a function call.
+
+```{r, eval = F}
+# Good
+if (debug) do(x) #space before left parentheses
+plot(x, y) #function call 
+
+# Bad
+if(debug)do(x) #need space before left parentheses
+plot (x, y) #no space before "(" in function call 
+```
+  
+- Extra spacing (i.e., more than one space in a row) is okay (but not required) if it improves alignment of equal signs or assignments (<-).
+
+```{r, eval = F}
+# Good 
+list(
+  total = a + b + c, 
+  mean  = (a + b + c) / n
+)
+
+longer.variable.name <- 5
+variable.name        <- 1
+
+longer.variable.name <- 5
+variable.name <- 1
+
+
+```
+
+- Do not place spaces around square brackets (unless there’s a comma, in which case see above).
+   
+```{r, eval = F}
+# Good
+diamonds[5, ]
+
+# Bad
+x[1,]   # Needs a space after the comma
+x[1 ,]  # Space goes after comma not before
+x [1, ] # No space before "["
+```
+
+
+## Lines of Code 
+
+- Strive to limit your code to 80 characters per line. This fits comfortably on a printed page with a reasonably sized font. If you find yourself running out of room, this is a good indication that you should encapsulate some of the work in a separate function.
+
+  - Use the light gray line on the left side of the console in RStudio
+
+- An opening curly brace should never go on its own line and should always be followed by a new line. A closing curly brace should always go on its own line, unless it’s followed by else. Always indent the code inside curly braces. 
+
+```{r, eval = F}
+# Good
+if (y < 0 && debug) {
+  message("Y is negative")
+}
+
+if (y == 0) {
+  log(x)
+} else {
+  y ^ x
+}
+
+# Bad
+
+if (y < 0 && debug)
+message("Y is negative") #no curly braces and message is on next line
+
+if (y == 0) {
+  log(x)
+} 
+else {  #else needs to be on the same line as "}"
+  y ^ x
+}
+
+```
+  
+- It’s okay to leave very short statements on the same line:
+
+```{r, eval = F}
+if (y < 0 && debug) message("Y is negative")
+```
+
+
+## Indentation 
+
+- When indenting your code, use two spaces. Never use tabs or mix tabs and spaces.
+
+  - a tab is usually 12 spaces
+  
+  - in Rstudio you can set your tab button to be 2 spaces: Tools > Global Options > Code > Editing > General > Check "Insert spaces for tab" > Set tab width equal to 2 spaces
+  
+  - You can set up auto-indent by: Tools > Global Options > Code > Editing > General > Check "Vertically align arguments in auto-indent"
+
+- The only exception is if a function definition runs over multiple lines. In that case, indent the second line to where the definition starts:
+
+
+```{r , eval = F}
+# Good 
+long_function_name <- function(a = "a long argument", 
+                               b = "another argument",
+                               c = "another long argument") {
+  # As usual code is indented by two spaces.
+  return(a + b + c)
+} 
+
+if (y == 0) {
+  log(x)
+} else {
+  y ^ x
+}
+
+# Bad 
+long_function_name <- function(a = "a long argument", 
+  b = "another argument",
+  c = "another long argument")  {
+  # As usual code is indented by two spaces.
+  return(a + b + c)
+} 
+  
+if (y == 0) {
+log(x)
+} else {
+y ^ x
+} 
+  
+```
+
+## Reminders 
+
+- Activity 1, Homework 1, Reading Quiz are due Wednesday, August 30th at noon
+
+- Office hours on Tuesday 
+
+- Use Canvas Discussion Board for questions 
+
+- Use this time to do Activity or Homework 1 and ask questions! 
+
+## Additional Readings 
+
+- Advanced R by Hadley Wickham Ch. 22 <http://adv-r.had.co.nz/Style.html> 
+
+- How to Write Good Programs by Perdita Stevens Ch. 2 & 3
+
+
+## References 
+
+- https://www.statmethods.net/interface/packages.html
+
+- https://hbctraining.github.io/Intro-to-R-flipped/lessons/04_introR_packages.html
+
+- https://www.markdownguide.org/getting-started/
+
+- https://rmarkdown.rstudio.com
+
+- http://adv-r.had.co.nz/Style.html
+
+
+
+

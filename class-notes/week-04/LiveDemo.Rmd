@@ -1,0 +1,63 @@
+---
+title: "Interactive Plotting Demo"
+author: "Matthew Beckman"
+date: "February 12, 2021"
+output: html_notebook
+---
+
+```{r}
+# clean up
+rm(list = ls())
+
+# packages
+library(tidyverse)
+library(esquisse)
+library(mosaic)
+library(tidytuesdayR)
+
+# data intake
+tuesdata <- tidytuesdayR::tt_load(2020, week = 52)
+
+BigMac <- tuesdata[["big-mac"]]
+```
+
+
+# Big Mac Plots
+
+## Big Mac Price vs GPD per Capita?
+
+First, lets investigate the Big Mac price and GDP per capita for each country.
+
+```{r}
+ggplot(BigMac) +
+ aes(x = dollar_price) +
+ geom_histogram(bins = 30L, fill = "#0c4c8a") +
+ theme_minimal()
+```
+
+```{r}
+ggplot(BigMac) +
+ aes(x = gdp_dollar) +
+ geom_density(adjust = 1L, fill = "#0c4c8a") +
+ labs(title = "Distribution of GDP per Capita for countries around the world") +
+ theme_gray()
+```
+
+
+```{r}
+
+ggplot(BigMac) +
+ aes(x = gdp_dollar, y = dollar_price) +
+ geom_point(size = 1L, colour = "#fde725") +
+ theme_dark()
+
+```
+
+
+
+## Value of Big Mac around the world
+
+```{r}
+mWorldMap(BigMac, key = "iso_a3", fill = "dollar_price")
+```
+

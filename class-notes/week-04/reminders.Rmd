@@ -1,0 +1,19 @@
+---
+title: "Reminders "
+output: html_document
+---
+
+
+
+- Activity: Markdown Schedule due tonight at 11:59 PM 
+- Extra Credit, Activity: Graphical Exploration, Homework, and Reading Quiz due Wednesday at 12:00 pm. 
+
+- REMEMBER TO PUSH TO GITHUB
+  - check on github.com to see what is pushed there 
+  - if you can't see it on GitHub, neither can I
+  
+- Activities have repo's in the class GitHub, homeworks do not have a repo
+
+- Next week we will be discussing tidy data in the `tidyverse` package. 
+
+- Check the step-by-step guide for how to clone, commit, push, and pull     

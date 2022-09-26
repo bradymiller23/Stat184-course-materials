@@ -1,0 +1,89 @@
+---
+title: "Tidy Data"
+author: 
+- "Presenter: Olivia Beck" 
+- "Content Credit: Matthew Beckman"
+date: "August 31, 2022"
+
+output: 
+  slidy_presentation: default
+  html_notebook: default
+
+---
+
+
+
+## Group warm-up
+
+Discuss the following with people nearby. Try to clear up the muddiest points, or bring it up to discuss as a class.
+
+- What is something you learned about Tidy Data and Computing with R this past week?
+- What's a "Codebook"?
+- How did the GitHub activity go?
+- What was the muddiest point?  Either...
+    - Got stuck & still stuck
+    - Got stuck & figured it out
+
+## Code Book Example 
+
+- Federal Elections Comission 
+  - https://www.fec.gov/data/browse-data/?tab=bulk-data
+
+
+
+
+## Tidy Data
+
+- Key ideas:
+  - Cases = Rows
+  - Variables = Columns 
+- How should we define **case**?
+- How do we identify **variables**?
+- Can data be presented in more than one way such that each is still **tidy** by definition?
+    - If No, why not?
+    - If Yes, how can we tell which is the correct form of **tidy** data?
+
+
+
+## Galton Data
+
+In the 1880s, Francis Galton started to make a mathematical theory of evolution.  
+
+Here's part of a page from his lab notebook.  Discuss the following in groups:
+
+- What might he investigate with these data (e.g., **Research Question**)?
+- Are these data **tidy** according to our definition?
+- What are the **cases**?
+- What are the **variables**?
+- How many **rows** of data should the result have?
+- How many **columns** of data should the result have?  What is the data type of each column?
+- What are some additional variables (not yet shown) that might be of interest?  How would you recommend showing that information in the data table?
+
+
+![A page from Francis Galton's notebook.](galton-notebook.jpg)
+
+
+
+## Activity: Put these into tidy form.  
+
+- Work with your partner 
+- As a team, you will put two different data sets into "tidy" form.  
+- **See Canvas for details**
+    - View-only source data is provided
+    - use any software you like
+    - must submit a CSV to Canvas 
+    - do not use spaces in your file names 
+- Tip: **Sketch things out together on paper before you do anything in the computer**
+
+
+#### Table 1: **Galton's Height measurements data**
+
+![A page from Francis Galton's notebook.](galton-notebook.jpg)
+
+
+#### Table 2: **Marital status in the US armed forces**
+
+- Here's the original neat, compact, yet [untidy spreadsheet (LINK)](https://docs.google.com/spreadsheets/d/1hWAmDkykIDp-3Eko6qHdkSVlMCqXQrz2FPU1dh2LUWw/edit#gid=0).  
+
+
+
