@@ -1776,8 +1776,8 @@ Content credit: Matthew Beckman</div></h4>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-text-begin -->
-<div id="agenda" class="section level2">
-<h2>Agenda</h2>
+<div id="agenda" class="section level1">
+<h1>Agenda</h1>
 <ul>
 <li>Basic Info about the Midterm and Final Project</li>
 <li>Discussion of common issues/questions</li>
@@ -1788,6 +1788,8 @@ group</li>
 <li>RStudio Concept Maps: <a href="https://github.com/rstudio/concept-maps" class="uri">https://github.com/rstudio/concept-maps</a></li>
 </ul>
 </div>
+<div id="midterm-and-final-project" class="section level1">
+<h1>Midterm and Final Project</h1>
 <div id="midterm" class="section level2">
 <h2>Midterm</h2>
 <ul>
@@ -1820,6 +1822,9 @@ can learn too - I will provide some practice questions soon</p>
 <li>You need to find your own data sets (minimum of 2)</li>
 </ul>
 </div>
+</div>
+<div id="rmarkdown-stuff" class="section level1">
+<h1>RMarkdown Stuff</h1>
 <div id="r-markdown---text-versus-r-chunk" class="section level2">
 <h2>R Markdown - Text versus R chunk</h2>
 <p>When we want to write plain text, we just write as normal.</p>
@@ -1926,8 +1931,9 @@ sum(x)</code></pre>
 <li>Are there functions that no one in the group understood?</li>
 </ul>
 </div>
-<div id="three-important-concepts-again" class="section level2">
-<h2>Three Important Concepts (Again)</h2>
+</div>
+<div id="three-important-concepts-again" class="section level1">
+<h1>Three Important Concepts (Again)</h1>
 <ol style="list-style-type: decimal">
 <li>Data can be usefully organized into tables with “cases” and
 “variables.” With “tidy data”
@@ -1952,8 +1958,8 @@ small set of basic operations on data tables</li>
 </ul></li>
 </ol>
 </div>
-<div id="presidential-investigation" class="section level2">
-<h2>Presidential Investigation</h2>
+<div id="presidential-investigation" class="section level1">
+<h1>Presidential Investigation</h1>
 <ul>
 <li>Let’s take some of our new tools for a spin…</li>
 <li>The <code>presidents</code> data are available from the
@@ -1963,38 +1969,13 @@ loaded by <code>tidyverse</code>)</li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGAifQ== -->
-<pre class="r"><code>library(tidyverse)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2RzIG92ZXJ3cml0dGVuIGJ5ICdkYnBseXInOlxuICBtZXRob2QgICAgICAgICBmcm9tXG4gIHByaW50LnRibF9sYXp5ICAgICBcbiAgcHJpbnQudGJsX3NxbCAgICAgIFxu4pSA4pSAIEF0dGFjaGluZyBwYWNrYWdlcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgdGlkeXZlcnNlIDEuMy4xIOKUgOKUgFxu4pyUIGdncGxvdDIgMy4zLjYgICAgIOKclCBwdXJyciAgIDAuMy40XG7inJQgdGliYmxlICAzLjEuOCAgICAg4pyUIGRwbHlyICAgMS4wLjlcbuKclCB0aWR5ciAgIDEuMi4wICAgICDinJQgc3RyaW5nciAxLjQuMVxu4pyUIHJlYWRyICAgMi4xLjIgICAgIOKclCBmb3JjYXRzIDAuNS4xXG7ilIDilIAgQ29uZmxpY3RzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCB0aWR5dmVyc2VfY29uZmxpY3RzKCkg4pSA4pSAXG7inJYgZHBseXI6OmZpbHRlcigpIG1hc2tzIHN0YXRzOjpmaWx0ZXIoKVxu4pyWIGRwbHlyOjpsYWcoKSAgICBtYXNrcyBzdGF0czo6bGFnKClcbiJ9 -->
-<pre><code>Registered S3 methods overwritten by &#39;dbplyr&#39;:
-  method         from
-  print.tbl_lazy     
-  print.tbl_sql      
-── Attaching packages ───────────────────────────────────────────────────────────── tidyverse 1.3.1 ──
-✔ ggplot2 3.3.6     ✔ purrr   0.3.4
-✔ tibble  3.1.8     ✔ dplyr   1.0.9
-✔ tidyr   1.2.0     ✔ stringr 1.4.1
-✔ readr   2.1.2     ✔ forcats 0.5.1
-── Conflicts ──────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkY0RhdGEpXG5saWJyYXJ5KHRpYmJsZSkgICAgICMgd2UnbGwgdXNlIGB0aWJibGU6OnRyaWJibGUoKWAgIHRvIHNwZWNpZnkgbmV3IHJvd3MgXG5saWJyYXJ5KGx1YnJpZGF0ZSkgICMgbmljZSBmdW5jdGlvbnMgZm9yIGhhbmRsaW5nIGRhdGVzXG5gYGAifQ== -->
-<pre class="r"><code>library(dcData)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGRjRGF0YSlcbmxpYnJhcnkodGliYmxlKSAgICAgIyB3ZSdsbCB1c2UgYHRpYmJsZTo6dHJpYmJsZSgpYCAgdG8gc3BlY2lmeSBuZXcgcm93cyBcbmxpYnJhcnkobHVicmlkYXRlKSAgIyBuaWNlIGZ1bmN0aW9ucyBmb3IgaGFuZGxpbmcgZGF0ZXNcblxuIyBkYXRhIGludGFrZVxuZGF0YShcInByZXNpZGVudGlhbFwiLCBwYWNrYWdlID0gXCJnZ3Bsb3QyXCIpXG5cbiMjIEFkZCBzb21lIG1vcmUgY2FzZXMgdG8gdGhlIGRhdGEgc2V0IFxuIyB5b3UgY2FuIHNlYXJjaCB0aGUgaGVscCBmb3IgdGhlIGB0cmliYmxlYCBmdW5jdGlvbiBpZiB5b3Ugd2FudCB0byBmaWd1cmUgaXQgb3V0IHdoYXQncyBoYXBwZW5pbmdcbkFkZFByZXMgPC0gXG4gICAgdGliYmxlOjp0cmliYmxlKH5uYW1lLCB+c3RhcnQsIH5lbmQsIH5wYXJ0eSxcbiAgICAgICAgICAgICAgICAgICAgIFwiUm9vc2V2ZWx0XCIsIHltZChcIjE5MzMtMDMtMDRcIiksIHltZChcIjE5NDUtMDQtMTJcIiksIFwiRGVtb2NyYXRpY1wiLFxuICAgICAgICAgICAgICAgICAgICBcIlRydW1hblwiLCB5bWQoXCIxOTQ1LTA0LTEyXCIpLCB5bWQoXCIxOTUzLTAxLTIwXCIpLCBcIkRlbW9jcmF0aWNcIixcbiAgICAgICAgICAgICAgICAgICAgXCJUcnVtcFwiLCB5bWQoXCIyMDE3LTAxLTIwXCIpLCB5bWQoXCIyMDIxLTAxLTIwXCIpLCBcIlJlcHVibGljYW5cIiwgXG4gICAgICAgICAgICAgICAgICAgIFwiQmlkZW5cIiwgeW1kKFwiMjAyMS0wMS0yMFwiKSwgeW1kKHRvZGF5KCkpLCBcIkRlbW9jcmF0aWNcIilcblxuIyBhcHBlbmQgdGhlIHJvd3Mgb2Ygb3VyIHR3byBcImRhdGEgZnJhbWVzXCJcblByZXNpZGVudHMgPC0gYmluZF9yb3dzKHByZXNpZGVudGlhbCwgQWRkUHJlcylcblxuaGVhZChQcmVzaWRlbnRzKVxuYGBgIn0= -->
+<pre class="r"><code>library(tidyverse)
+library(dcData)
 library(tibble)     # we&#39;ll use `tibble::tribble()`  to specify new rows 
-library(lubridate)  # nice functions for handling dates</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYbHVicmlkYXRl4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpiYXNl4oCZOlxuXG4gICAgZGF0ZSwgaW50ZXJzZWN0LCBzZXRkaWZmLCB1bmlvblxuIn0= -->
-<pre><code>
-Attaching package: ‘lubridate’
+library(lubridate)  # nice functions for handling dates
 
-The following objects are masked from ‘package:base’:
-
-    date, intersect, setdiff, union</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBkYXRhIGludGFrZVxuZGF0YShcInByZXNpZGVudGlhbFwiLCBwYWNrYWdlID0gXCJnZ3Bsb3QyXCIpXG5cbiMjIEFkZCBzb21lIG1vcmUgY2FzZXMgdG8gdGhlIGRhdGEgc2V0IFxuIyB5b3UgY2FuIHNlYXJjaCB0aGUgaGVscCBmb3IgdGhlIGB0cmliYmxlYCBmdW5jdGlvbiBpZiB5b3Ugd2FudCB0byBmaWd1cmUgaXQgb3V0IHdoYXQncyBoYXBwZW5pbmdcbkFkZFByZXMgPC0gXG4gICAgdGliYmxlOjp0cmliYmxlKH5uYW1lLCB+c3RhcnQsIH5lbmQsIH5wYXJ0eSxcbiAgICAgICAgICAgICAgICAgICAgIFwiUm9vc2V2ZWx0XCIsIHltZChcIjE5MzMtMDMtMDRcIiksIHltZChcIjE5NDUtMDQtMTJcIiksIFwiRGVtb2NyYXRpY1wiLFxuICAgICAgICAgICAgICAgICAgICBcIlRydW1hblwiLCB5bWQoXCIxOTQ1LTA0LTEyXCIpLCB5bWQoXCIxOTUzLTAxLTIwXCIpLCBcIkRlbW9jcmF0aWNcIixcbiAgICAgICAgICAgICAgICAgICAgXCJUcnVtcFwiLCB5bWQoXCIyMDE3LTAxLTIwXCIpLCB5bWQoXCIyMDIxLTAxLTIwXCIpLCBcIlJlcHVibGljYW5cIiwgXG4gICAgICAgICAgICAgICAgICAgIFwiQmlkZW5cIiwgeW1kKFwiMjAyMS0wMS0yMFwiKSwgeW1kKHRvZGF5KCkpLCBcIkRlbW9jcmF0aWNcIilcblxuIyBhcHBlbmQgdGhlIHJvd3Mgb2Ygb3VyIHR3byBcImRhdGEgZnJhbWVzXCJcblByZXNpZGVudHMgPC0gYmluZF9yb3dzKHByZXNpZGVudGlhbCwgQWRkUHJlcylcblxuaGVhZChQcmVzaWRlbnRzKVxuYGBgIn0= -->
-<pre class="r"><code># data intake
+# data intake
 data(&quot;presidential&quot;, package = &quot;ggplot2&quot;)
 
 ## Add some more cases to the data set 
@@ -2020,7 +2001,6 @@ head(Presidents)</code></pre>
 <!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-</div>
 <div id="guided-practice" class="section level2">
 <h2>Guided practice</h2>
 <ol style="list-style-type: decimal">
@@ -2041,13 +2021,35 @@ years?</li>
 <li>add Harry Truman &amp; Franklin D. Roosevelt, then repeat 6-9</li>
 </ol>
 </div>
+</div>
 <div id="answers" class="section level1">
 <h1>Answers</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShQcmVzaWRlbnRzKSAgIyBub3Qgc28gdXNlZnVsPyFcblxuYGBgIn0= -->
-<pre class="r"><code>summary(Presidents)  # not so useful?!
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyAxLiBzdW1tYXJ5IGZ1bmN0aW9uc1xuZ2xpbXBzZShQcmVzaWRlbnRzKSAgIyB3aGF0J3MgdGhlIGJlbmVmaXQ/XG5gYGAifQ== -->
+<pre class="r"><code># 1. summary functions
+glimpse(Presidents)  # what&#39;s the benefit?</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMTVcbkNvbHVtbnM6IDRcbiQgbmFtZSAgPGNocj4gXCJFaXNlbmhvd2VyXCIsIFwiS2VubmVkeVwiLCBcIkpvaG5zb25cIiwgXCJOaXhvblwiLCBcIkZvcmRcIiwgXCJDYXJ0ZXJcIiwgXCJSZWFnYW5cIiwgXCJCdXNoXCIsIFwiQ2xpbnRvblwiLCBcIkJ1c2hcIiwgXCJPYmFtYVwiLCBcIlJvb3NldmVsdFwiLCBcIlRydeKAplxuJCBzdGFydCA8ZGF0ZT4gMTk1My0wMS0yMCwgMTk2MS0wMS0yMCwgMTk2My0xMS0yMiwgMTk2OS0wMS0yMCwgMTk3NC0wOC0wOSwgMTk3Ny0wMS0yMCwgMTk4MS0wMS0yMCwgMTk4OS0wMS0yMCwgMTk5My0wMS0yMCwgMjAwMS0wMS0yMCwgMjAwOS3igKZcbiQgZW5kICAgPGRhdGU+IDE5NjEtMDEtMjAsIDE5NjMtMTEtMjIsIDE5NjktMDEtMjAsIDE5NzQtMDgtMDksIDE5NzctMDEtMjAsIDE5ODEtMDEtMjAsIDE5ODktMDEtMjAsIDE5OTMtMDEtMjAsIDIwMDEtMDEtMjAsIDIwMDktMDEtMjAsIDIwMTct4oCmXG4kIHBhcnR5IDxjaHI+IFwiUmVwdWJsaWNhblwiLCBcIkRlbW9jcmF0aWNcIiwgXCJEZW1vY3JhdGljXCIsIFwiUmVwdWJsaWNhblwiLCBcIlJlcHVibGljYW5cIiwgXCJEZW1vY3JhdGljXCIsIFwiUmVwdWJsaWNhblwiLCBcIlJlcHVibGljYW5cIiwgXCJEZW1vY3JhdGljXCIsIOKAplxuIn0= -->
+<pre><code>Rows: 15
+Columns: 4
+$ name  &lt;chr&gt; &quot;Eisenhower&quot;, &quot;Kennedy&quot;, &quot;Johnson&quot;, &quot;Nixon&quot;, &quot;Ford&quot;, &quot;Carter&quot;, &quot;Reagan&quot;, &quot;Bush&quot;, &quot;Clinton&quot;, &quot;Bush&quot;, &quot;Obama&quot;, &quot;Roosevelt&quot;, &quot;Tru…
+$ start &lt;date&gt; 1953-01-20, 1961-01-20, 1963-11-22, 1969-01-20, 1974-08-09, 1977-01-20, 1981-01-20, 1989-01-20, 1993-01-20, 2001-01-20, 2009-…
+$ end   &lt;date&gt; 1961-01-20, 1963-11-22, 1969-01-20, 1974-08-09, 1977-01-20, 1981-01-20, 1989-01-20, 1993-01-20, 2001-01-20, 2009-01-20, 2017-…
+$ party &lt;chr&gt; &quot;Republican&quot;, &quot;Democratic&quot;, &quot;Democratic&quot;, &quot;Republican&quot;, &quot;Republican&quot;, &quot;Democratic&quot;, &quot;Republican&quot;, &quot;Republican&quot;, &quot;Democratic&quot;, …</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyKFByZXNpZGVudHMpICAgICAgIyA/XG5gYGAifQ== -->
+<pre class="r"><code>str(Presidents)      # ?</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoidGliYmxlIFsxNSDDlyA0XSAoUzM6IHRibF9kZi90YmwvZGF0YS5mcmFtZSlcbiAkIG5hbWUgOiBjaHIgWzE6MTVdIFwiRWlzZW5ob3dlclwiIFwiS2VubmVkeVwiIFwiSm9obnNvblwiIFwiTml4b25cIiAuLi5cbiAkIHN0YXJ0OiBEYXRlWzE6MTVdLCBmb3JtYXQ6IFwiMTk1My0wMS0yMFwiIFwiMTk2MS0wMS0yMFwiIFwiMTk2My0xMS0yMlwiIFwiMTk2OS0wMS0yMFwiIC4uLlxuICQgZW5kICA6IERhdGVbMToxNV0sIGZvcm1hdDogXCIxOTYxLTAxLTIwXCIgXCIxOTYzLTExLTIyXCIgXCIxOTY5LTAxLTIwXCIgXCIxOTc0LTA4LTA5XCIgLi4uXG4gJCBwYXJ0eTogY2hyIFsxOjE1XSBcIlJlcHVibGljYW5cIiBcIkRlbW9jcmF0aWNcIiBcIkRlbW9jcmF0aWNcIiBcIlJlcHVibGljYW5cIiAuLi5cbiJ9 -->
+<pre><code>tibble [15 × 4] (S3: tbl_df/tbl/data.frame)
+ $ name : chr [1:15] &quot;Eisenhower&quot; &quot;Kennedy&quot; &quot;Johnson&quot; &quot;Nixon&quot; ...
+ $ start: Date[1:15], format: &quot;1953-01-20&quot; &quot;1961-01-20&quot; &quot;1963-11-22&quot; &quot;1969-01-20&quot; ...
+ $ end  : Date[1:15], format: &quot;1961-01-20&quot; &quot;1963-11-22&quot; &quot;1969-01-20&quot; &quot;1974-08-09&quot; ...
+ $ party: chr [1:15] &quot;Republican&quot; &quot;Democratic&quot; &quot;Democratic&quot; &quot;Republican&quot; ...</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShQcmVzaWRlbnRzKSAgIyBub3Qgc28gdXNlZnVsPyFcbmBgYCJ9 -->
+<pre class="r"><code>summary(Presidents)  # not so useful?!</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiICAgICBuYW1lICAgICAgICAgICAgICAgc3RhcnQgICAgICAgICAgICAgICAgIGVuZCAgICAgICAgICAgICAgICBwYXJ0eSAgICAgICAgICBcbiBMZW5ndGg6MTUgICAgICAgICAgTWluLiAgIDoxOTMzLTAzLTA0ICAgTWluLiAgIDoxOTQ1LTA0LTEyICAgTGVuZ3RoOjE1ICAgICAgICAgXG4gQ2xhc3MgOmNoYXJhY3RlciAgIDFzdCBRdS46MTk2Mi0wNi0yMiAgIDFzdCBRdS46MTk2Ni0wNi0yMiAgIENsYXNzIDpjaGFyYWN0ZXIgIFxuIE1vZGUgIDpjaGFyYWN0ZXIgICBNZWRpYW4gOjE5NzctMDEtMjAgICBNZWRpYW4gOjE5ODEtMDEtMjAgICBNb2RlICA6Y2hhcmFjdGVyICBcbiAgICAgICAgICAgICAgICAgICAgTWVhbiAgIDoxOTc5LTAzLTI3ICAgTWVhbiAgIDoxOTg1LTAzLTE2ICAgICAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgICAgICAgIDNyZCBRdS46MTk5Ny0wMS0yMCAgIDNyZCBRdS46MjAwNS0wMS0yMCAgICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICAgICBNYXguICAgOjIwMjEtMDEtMjAgICBNYXguICAgOjIwMjItMDktMjggICAgICAgICAgICAgICAgICAgICBcbiJ9 -->
 <pre><code>     name               start                 end                party          
@@ -2058,12 +2060,114 @@ years?</li>
                     3rd Qu.:1997-01-20   3rd Qu.:2005-01-20                     
                     Max.   :2021-01-20   Max.   :2022-09-28                     </code></pre>
 <!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVmlldyhQcmVzaWRlbnRzKSAgICAgIyBjb25zb2xlIHBsZWFzZSFcblxuXG4jIHNvbWUgd3JhbmdsaW5nIFxuUHJlc2lkZW50c193cmFuZ2xlZCA8LSBcbiAgICBQcmVzaWRlbnRzICU+JVxuICAgIG11dGF0ZShkdXJhdGlvbiA9IGVuZCAtIHN0YXJ0LCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIDJcbiAgICAgICAgICAgbmFtZSA9IGlmX2Vsc2UobmFtZSA9PSBcIkJ1c2hcIiAmIHN0YXJ0IDwgeW1kKFwiMjAwMC0wMS0wMVwiKSwgICMgM1xuICAgICAgICAgICAgICAgICAgICAgICAgICB0cnVlID0gXCJCdXNoIChTcilcIiwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGZhbHNlID0gbmFtZSkpICU+JVxuICAgIHNlbGVjdChuYW1lLCBwYXJ0eSwgZHVyYXRpb24pICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIDRcbiAgICBcblxuIyMjIHNvbWUgcmVzdWx0c1xuIyAzIGNoZWNrIHRoZSBidXNoZXNcbnRhaWwoUHJlc2lkZW50c193cmFuZ2xlZCkgXG5gYGAifQ== -->
+<pre class="r"><code>View(Presidents)     # console please!
+
+
+# some wrangling 
+Presidents_wrangled &lt;- 
+    Presidents %&gt;%
+    mutate(duration = end - start,                                     # 2
+           name = if_else(name == &quot;Bush&quot; &amp; start &lt; ymd(&quot;2000-01-01&quot;),  # 3
+                          true = &quot;Bush (Sr)&quot;, 
+                          false = name)) %&gt;%
+    select(name, party, duration)                                      # 4
+    
+
+### some results
+# 3 check the bushes
+tail(Presidents_wrangled) </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyI2IMOXIDMiXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBNVZTM1VyRE1CUSs2ODkwZ1UzQjUxZ1J2ZkZ5akxGYllVelliZHBtTHRnbUpVM1UzUW0rZzQvZ3ZlL2kwM2l4TG1tVG9oRUVBK2s1NTh1WDg1MnZaTFhZWEtNTkFvQVFvbUFBWWF4VGlPL1d5K2tOYUVRWEE0aGdaT0t6SmwyMFRJQnp2WWYySUpxcmVtZnorRGJGSmJiRmFNVjVUUjVKSVMwd1hBdFZZdWE0cHFwY01hYzVZVjVudENLVlNndWE5WGZRZ3BROEUxalM3RC9JbjMwZ25Cak4yZnVuOFE1OS9GamErcktMYnhaL25VRzNmdnllT0N0d1hWc0REanpONlhZcmFVbDhzbUpVK3VRb3gzdURIWHd5d3lWeDVOQ1JEZWdJRlJaeTMwc3FZNHN6cjh0SThLZkVkUnJySGJ6b1Q5TTBYeDB4YUx4eFVJNGxUcmJDNlB3ZTZvUlhSa1EzQzh5YmlMM0xBK0VCWjRvWjhYeWE3UlI3bUY0WmdmYTRXMk9iRDcvbFlTY1p1Y0ZpOTRvSXU2ZXNOMS9nbEJTMm1HaVRyY2VrRXBTNVo0YzBXaWVTUyt4NEtPT0ZRMXB2Y0RnQ000ZFN3d29EQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["party"],"name":[2],"type":["chr"],"align":["left"]},{"label":["duration"],"name":[3],"type":["time"],"align":["right"]}],"data":[{"1":"Bush","2":"Republican","3":"2922 days"},{"1":"Obama","2":"Democratic","3":"2922 days"},{"1":"Roosevelt","2":"Democratic","3":"4422 days"},{"1":"Truman","2":"Democratic","3":"2840 days"},{"1":"Trump","2":"Republican","3":"1461 days"},{"1":"Biden","2":"Democratic","3":"616 days"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4jIDYgc2hvcnRlc3RcblByZXNpZGVudHNfd3JhbmdsZWQgJT4lXG4gICAgYXJyYW5nZShkdXJhdGlvbikgJT4lXG4gICAgaGVhZCgpXG5gYGAifQ== -->
+<pre class="r"><code>
+# 6 shortest
+Presidents_wrangled %&gt;%
+    arrange(duration) %&gt;%
+    head()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyI2IMOXIDMiXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBNDFTUFUvRE1CQzk1cU9sa1ZxUStBT01NQ1JDc0RCV3BlckNWb3JVMVkxZGFwSFlrZU1JdWlFeHNqRHh5L2d4aUtIQlR1eXFNaUFSeWJtNzUrZDc5eXpQSm92TGFCRUJnQStCMXdFL1ZDbUVkL05wZkFVS1VVVUhBdWpyK0tSSXh3MFQ0RWl0cnRrSXh4UVRab3BneWdVMmVlK0dNRWJ3eHBUZGF5UWtFYWJxajZ0eWZYSjZLODVzbTdtbzhzTHBIVTFJemxPQkpFMHRNaU5GdGN4b2l0amZuUCtjMmtQQUgyck4wY3RJdTRmUjYyY2IzODdiK1A3eGEzUXVLRXd6VkpiR2dBVVBNRjJ0Sk0ySlM2NFlsUzQ1d0dpanNhMUxaaWdubHV4YnNnWXRvVkJYdTlsSlZ0bzZaMDZYdnVDUGllMDBVTXQ3VnIrNnJyOWFvbGM3NDBRWVNaU3NoTmI1T1ZTUEYxcEVOZlAwcXdpZHd4M2hBSWNWMCtJNFR0Y1ZlNGd2dEVDejNYNERrM2YzY3IrVkRPeGdvWDFKaE4xVHRqT2ZvU1hKVERGVUpodVBTU0VvazlhSlFzdEVjb2tzTDBwNVpwSEdHMnkvQWZySjZOc01Bd0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["party"],"name":[2],"type":["chr"],"align":["left"]},{"label":["duration"],"name":[3],"type":["time"],"align":["right"]}],"data":[{"1":"Biden","2":"Democratic","3":"616 days"},{"1":"Ford","2":"Republican","3":"895 days"},{"1":"Kennedy","2":"Democratic","3":"1036 days"},{"1":"Carter","2":"Democratic","3":"1461 days"},{"1":"Bush (Sr)","2":"Republican","3":"1461 days"},{"1":"Trump","2":"Republican","3":"1461 days"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4jIDcuIGxvbmdlc3QgIFxuUHJlc2lkZW50c193cmFuZ2xlZCAlPiVcbiAgICBhcnJhbmdlKGR1cmF0aW9uKSAlPiVcbiAgICB0YWlsKClcbmBgYCJ9 -->
+<pre class="r"><code>
+# 7. longest  
+Presidents_wrangled %&gt;%
+    arrange(duration) %&gt;%
+    tail()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyI2IMOXIDMiXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBNVZTeTA3RE1CRGN2Rm9hcVFXcDM5RWM0TUlSUWVrVktRS3BWemR4V3d2SGpoeUgwaHRmdzUxLzRXczROTmlKSGJVR0NXSEo4ZTU0c3JOamJUcGZYc1hMR0FBQ0NIMFBna2lGRUQwOUxtYlhvQkNWZUJEQ1NKK3ZpalJ0bVFBWGFnL01SWHhQS3N5MmZJZUZRUVlwUmh2RVREYThvNFJKYnRQd3RxNjJKbzRlVnFoQUpobWxuRmY0QlZQcENxUzRyRmVVWkgzSlg1QTVMbmdta0NUWmZ6aEhDQVFUclhuei9xbWZBUDQ4UHhiUXJaTlhpaktLcXNvWXNPQlpUdFpyU1Fyc2ttdEdwRXNPYzdUWDJNRWxNMVJnU3c0c1dZT1dVQ0loOTcxa3JXMnBWeit0TWhKOGw5aEtZN1g5Ti9WcG11YXJJL3FOMDA2Y0k0bVN0ZEE2UDVzYThsS0xxR0srSG8zSStka1REbkJlTXkyZXo3SnR6WjVubDFxZ3ZlN1cyTVNEb3pqb0pFUGJXR1NIRExNTlliMTVpbGFZbW1TaVRMWWVrMUtvMGJOT0ZGb2xra3RrZVhIR3FVVmFiM0Q0QnYrdHFWOFJBd0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["party"],"name":[2],"type":["chr"],"align":["left"]},{"label":["duration"],"name":[3],"type":["time"],"align":["right"]}],"data":[{"1":"Eisenhower","2":"Republican","3":"2922 days"},{"1":"Reagan","2":"Republican","3":"2922 days"},{"1":"Clinton","2":"Democratic","3":"2922 days"},{"1":"Bush","2":"Republican","3":"2922 days"},{"1":"Obama","2":"Democratic","3":"2922 days"},{"1":"Roosevelt","2":"Democratic","3":"4422 days"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5QcmVzaWRlbnRzX3dyYW5nbGVkICU+JVxuICAgIGFycmFuZ2UoZGVzYyhkdXJhdGlvbikpICU+JVxuICAgIGhlYWQoKVxuYGBgIn0= -->
+<pre class="r"><code>
+Presidents_wrangled %&gt;%
+    arrange(desc(duration)) %&gt;%
+    head()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyI2IMOXIDMiXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBNDFTeTA3RE1CRGM1dEhTU0MxSWZFZHpnQXZIQ2txdlNCRkl2VzRUdDdWdzdNaHhLTDN4TmR6NUY3NkdBOEZPN2FvWURvM2tlSGM4M3RsWk9ac3RycE5GQWdBaFJFRVB3bGlIRUQ4OXppYzNvQkdkOUNDQ29kbGZOZW15WXdKYzZOVzNCOE5NaUpxOEVLWXNrTnpUbXZDTjJCSnBrWDVHY0kzY1pvTTdScmtTTG8xdW0zcGo0L2hoaVNWNkFzbU1sQ0tYcUdqdWtJeFV6WkxSL0ZEekgrU1VXMGNjQ01kR2Mvb3hOeU9BNmZ2blNiczNwVGhuV05mV2dBUFBDcnBhS1ZvU245eHdxbnh5Vk9ET1lOOCttV05KSERsMFpBTTZRb1ZTN1E2U2piR2xoL3k3eWxDS2Jlb3FqZlFLM3ZTdmJkdXZQVEZvdlhhU0FoV21LMmwwL2pZMUVKVVIwY1VDOHpSaTczSlBlc0I1dzQxNE1jazNEWCtlWEJtQjduai9qV3pjUDRyRHZXVGtHb3ZkbXlKOFRmbkJQTU1sWVRZWmE1T2R4N1NTK3FVNUp4cXRVeVVVT2w2U0MrYVF6aHQ4L3dDS1JDRllFUU1BQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["party"],"name":[2],"type":["chr"],"align":["left"]},{"label":["duration"],"name":[3],"type":["time"],"align":["right"]}],"data":[{"1":"Roosevelt","2":"Democratic","3":"4422 days"},{"1":"Eisenhower","2":"Republican","3":"2922 days"},{"1":"Reagan","2":"Republican","3":"2922 days"},{"1":"Clinton","2":"Democratic","3":"2922 days"},{"1":"Bush","2":"Republican","3":"2922 days"},{"1":"Obama","2":"Democratic","3":"2922 days"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4jIDguIG1vcmUgdGhhbiA0IHllYXJzLCBidXQgbGVzcyB0aGFuIDggeWVhcnNcblxuUHJlc2lkZW50c193cmFuZ2xlZCAlPiVcbiAgICBmaWx0ZXIoZHVyYXRpb24gPiAxNDYxLCBkdXJhdGlvbiA8IDI5MjIpXG5gYGAifQ== -->
+<pre class="r"><code>
+# 8. more than 4 years, but less than 8 years
+
+Presidents_wrangled %&gt;%
+    filter(duration &gt; 1461, duration &lt; 2922)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIzIMOXIDMiXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFSUFUvRE1CQzlmRkVhcVFXcHZ5TVJnb1d4UThYQXdGQVZxYXZyT05RaXNTUEhGdW5HSDBGc1RQeEZHdXdramhTREpjZDN6Ky91M1l1M20vMWR2SThCSUlEUTl5Q0lkQWpSOCs0aHVRZU42TVNERU9ibWJEUnAxVEVCcnZ1SzdtTDJ5SStzNW14SW95ZmFqTW5GVHFnU01hY2kzcENTWTRFa3hSYlpra29kQ29vUis0Y0R3ZEpVcno4YU14MnNQNy83OCtzRytqVVpOTUlGcXV0QjBvS1hHYzF6U1V2aWtoV2owaVdIR1RvWjdPeVNHU3FKSlZzem9RRXRvVUpDbmtaSlpjYlgvMkxhWlM3NFcybzdMZlQyMy9XbmJkdWZudWkzempoeGhpUktjMkYwL2c0MTQ1VVIwYzE4OHpxUlUrd0pCN2hTeklobkNUNHE5cHJjR29IdXVsK0xJUTZtc1pFTTdXQ1JmVjNDWGlnYnpSZm9RSW9oV1dxVG5jZTBFcFJKNjBTamRTcTVSSllYWTE1WXBQTUc1MThrd2Z1UWxBSUFBQT09In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["party"],"name":[2],"type":["chr"],"align":["left"]},{"label":["duration"],"name":[3],"type":["time"],"align":["right"]}],"data":[{"1":"Johnson","2":"Democratic","3":"1886 days"},{"1":"Nixon","2":"Republican","3":"2027 days"},{"1":"Truman","2":"Democratic","3":"2840 days"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5cbiMgOS4gcGFydHkgYmFsYW5jZVxuXG5QcmVzaWRlbnRzX3dyYW5nbGVkICU+JVxuICAgIGdyb3VwX2J5KHBhcnR5KSAlPiVcbiAgICBzdW1tYXJpc2UodG90YWwgPSBuKCksIFxuICAgICAgICAgICAgICBpbl9wb3dlciA9IHN1bShkdXJhdGlvbikpXG5gYGAifQ== -->
+<pre class="r"><code>
+
+# 9. party balance
+
+Presidents_wrangled %&gt;%
+    group_by(party) %&gt;%
+    summarise(total = n(), 
+              in_power = sum(duration))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MiwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIyIMOXIDMiXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBMlZRUzA3RE1CQ2QvR2dicVFXSmN5UUwyTERNb3VJQUZVamRJVGR4d0NLeEk4ZFI2WTR0bCtFa2JMaFF3OWpOU0syeFpIdm16Zk84ZWQ2c3QvZnBOZ1dBQ09Jd2dDakJFSkxucDhmc0FSREJKSUFZRnZiK1FOS3RZd0xjNEE2blFycm1yU28xTTZJa1pNTzdZZGVJa2tuTWxvNExNTWM5dytjcm14ZS8zNFdWS242KzRMUXV4Skt5WVgwL0NSRTRyMFJkRzlGeW56eElZWHh5WExHRHhZNCtXYktXRXpraXNHUGFIQ2d4eXJDR05JVjg2ZFNlYTYvTlFxdDlUcTJjdzA4OHhuR2M5TUxSbXlldG1HRjVyWmtkLzk5VU05VVpvU1EyQyswWEo5N2pRSHZBOVNDdGVKV1ZiNE44eis2c2dDdWYxbktLdzdNNE9rbkdORmd5dGJyaThsVklUdVlidHVOa2ZvVW1uY2U4MDBJYWNvSm9uNTkvVWxxcWhoRG5EWTUvTEV0a0ZGa0NBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["party"],"name":[1],"type":["chr"],"align":["left"]},{"label":["total"],"name":[2],"type":["int"],"align":["right"]},{"label":["in_power"],"name":[3],"type":["time"],"align":["right"]}],"data":[{"1":"Democratic","2":"8","3":"18105 days"},{"1":"Republican","2":"7","3":"14610 days"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4jIHJlcGVhdCFcblxuYGBgIn0= -->
+<pre class="r"><code>
+# repeat!
+</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiV2VlayA2OiBXcmFuZ2xpbmcgYW5kIChtb3JlKSBEYXRhIFZlcmJzIgpzdWJ0aXRsZTogIkRhdGEgQ29tcHV0aW5nIENoYXB0ZXIgMTAiCmF1dGhvcjogfAogICAgICAgIHwgUHJlc2VudGVyOiBPbGl2aWEgQmVjawogICAgICAgIHwgQ29udGVudCBjcmVkaXQ6IE1hdHRoZXcgQmVja21hbgpkYXRlOiAiU2VwdGVtYmVyIDI4LCAyMDIyIgpvdXRwdXQ6IAogIHNsaWR5X3ByZXNlbnRhdGlvbjogZGVmYXVsdAogIGh0bWxfbm90ZWJvb2s6IGRlZmF1bHQKLS0tCgpgYGB7ciBpbmNsdWRlPUZBTFNFfQojIEZyb250bWF0dGVyCnJtKGxpc3QgPSBscygpKQoKIyBwYWNrYWdlcwpsaWJyYXJ5KG1vc2FpY0RhdGEpCmxpYnJhcnkoa25pdHIpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGRjRGF0YSkKCmBgYAoKCiMjIEFnZW5kYQoKLSBCYXNpYyBJbmZvIGFib3V0IHRoZSBNaWR0ZXJtIGFuZCBGaW5hbCBQcm9qZWN0Ci0gRGlzY3Vzc2lvbiBvZiBjb21tb24gaXNzdWVzL3F1ZXN0aW9ucyAKLSBSZXZpZXcgb2YgZGF0YSB2ZXJicyAmIHN1bW1hcnkgZnVuY3Rpb25zIHdpdGggeW91ciBzbWFsbCBncm91cAotIERpc2N1c3Npb24gb2YgbmV3IGZ1bmN0aW9ucyBhbmQga2V5IGNvbmNlcHRzCi0gR3VpZGVkIGV4YW1wbGUgaGlnaGxpZ2h0aW5nIHNldmVyYWwgbmV3IGRhdGEgdmVyYnMKLSBSU3R1ZGlvIENvbmNlcHQgTWFwczogPGh0dHBzOi8vZ2l0aHViLmNvbS9yc3R1ZGlvL2NvbmNlcHQtbWFwcz4KCgojIyBNaWR0ZXJtIAoKLSBPY3RvYmVyIDI0dGggKEZyaWRheSkgZHVyaW5nIGNsYXNzIAotIE9uIHBhcGVyIAotIEFueXRoaW5nIHdlIGhhdmUgZG9uZSBpbiBjbGFzcyBiZWZvcmUgdGhlbiBpcyBmYWlyIGdhbWUgZm9yIHF1ZXN0aW9ucwotIFRoaXMgaXMgbm90IGdvaW5nIHRvIGJlIGEgZGlmZmljdWx0IGV4YW0uIEl0IHdpbGwgY292ZXIgbWF0ZXJpYWwgZnJvbSBgdGlkeXZlcnNlYCBmdW5jdGlvbnMgYW5kIEdpdEh1YiB3b3JrZmxvd3MuIAoKClRvIHByYWN0aWNlOiAKLSBMb29rIHRocm91Z2ggdGV4dGJvb2sgYW5kIHJlYWQgdGhyb3VnaCBzb21lIG9mIHRoZSBwcm9ibGVtcyBub3QgYXNzaWduZWQgCi0gTWFrZSBzdXJlIHlvdSB1bmRlcnN0YW5kIGV2ZXJ5dGhpbmcgZnJvbSB0aGUgYWN0aXZpdGllcywgaG9tZXdvcmtzLCBhbmQgcmVhZGluZyBxdWl6emVzCi0gSWYgeW91IGhhdmUgcXVlc3Rpb25zLCBhc2shIFBvc3QgZ2VuZXJhbCBjb250ZW50IHF1ZXN0aW9uIG9uIENhbnZhcyBEaXNjdXNzaW9uIGJvYXJkIHNvIHlvdXIgcGVlcnMgY2FuIGxlYXJuIHRvbwotIEkgd2lsbCBwcm92aWRlIHNvbWUgcHJhY3RpY2UgcXVlc3Rpb25zIHNvb24gCgoKCiMjIEZpbmFsIFByb2plY3QgCgotIE11bHRpcGxlIGR1ZSBkYXRlcyAob24gY2FudmFzKQotIEdvYWwgaXMgdG8gZG8gYSAicHJvZmVzc2lvbmFsIiBkYXRhIGFuYWx5c2lzIHRoYXQgaXMgUkVQUk9EVUNJQkxFIAogIC0gUmVzZWFyY2ggcXVlc3Rpb24KICAtIERhdGEgRXhwbG9yYXRpb24KICAtIEFuc3dlciB5b3VyIHF1ZXN0aW9uIHdpdGggd3JhbmdsZWQgZGF0YSBhbmQgZ3JhcGhzIAogICAgLSBOTyBTVEFUSVNUSUNBTCBBTkFMWVNJUwotIFlvdSBuZWVkIHRvIGZpbmQgeW91ciBvd24gZGF0YSBzZXRzIChtaW5pbXVtIG9mIDIpCgoKCiMjIFIgTWFya2Rvd24gLSBUZXh0IHZlcnN1cyBSIGNodW5rCgpXaGVuIHdlIHdhbnQgdG8gd3JpdGUgcGxhaW4gdGV4dCwgd2UganVzdCB3cml0ZSBhcyBub3JtYWwuIAoKV2hlbiB3ZSB3YW50IHRvIHVzZSBhIGhlYWRlciB3ZSB1c2UgIyBiZWZvcmUgb3VyIHRleHQgCgpXaGVuIHdlIHdhbnQgdG8gd3JpdGUgUiBjb2RlLCB3ZSB1c2UgYW4gUiBjaHVjazoKCmBgYHtyfQp4IDwtIDE6MTAKc3VtKHgpCmBgYAoKCgojIyBSIE5vdGVib29rIHZzIFIgTWFya2Rvd24gQ29tcGFyaXNvbgoKICB8ICAgICAgICAgICAgICAgICAgfCAgUiBOb3RlYm9vayAgICAgICAgICAgIHwgIFIgTWFya2Rvd24gICAgICB8CiAgfDotLS0tLS0tLS0tLS0tLS0tLXw6LS0tLS0tLS0tLS0tLS0tLS0tLS0tLTp8Oi0tLS0tLS0tLS0tLS0tLS06fAogIHwgU291cmNlIGRvY3VtZW50ICB8IEZpbGVOYW1lLlJtZCAgICAgICAgICAgfCBGaWxlTmFtZS5SbWQgICAgIHwKICB8IFR5cGVzZXR0aW5nIHN5bnRheCB8IG1hcmtkb3duICAgICAgICAgICAgIHwgbWFya2Rvd24gICB8CiAgfCBZQU1MIEhlYWRlciAgICAgIHwgYG91dHB1dDogaHRtbF9ub3RlYm9va2AgfCBgb3V0cHV0OiBodG1sX2RvY3VtZW50YCAgfAogIHwgY29tcGlsZSBidXR0b24gdGV4dCB8ICJQcmV2aWV3IiBvciAiUHJldmlldyBOb3RlYm9vayIgfCAiS25pdCB0byBIVE1MIiBvciAiS25pdCIgfAogIHwgY29tcGlsZSBidXR0b24gaWNvbiAgfCAgbm90ZWJvb2sgICAgICAgICB8IGJsdWUgeWFybiBiYWxsICB8CiAgfCBPdXRwdXQgZmlsZSBkZWZhdWx0ICB8IEZpbGVOYW1lLm5iLmh0bWwgIHwgRmlsZU5hbWUuaHRtbCAgfAogIHwgQ29kZSBjaHVuayBoYW5kbGluZyAgfCBSdW4gUiBjb2RlIGZpcnN0ICB8IFJ1bnMgUiBjb2RlIHdoZW4gcmVuZGVyZWQgfAogIHwgLlJtZCBzb3VyY2UgZW1iZWRkZWQ/IHwgKipZRVMqKiAgICAgICAgICAgICAgfCAqKk5PKiogICAgfAoKCgoKCgojIyBEaXNjdXNzaW9uL1JldmlldyBUYXNrOiAKCi0gRXhwbGFpbiBhIGZldyBidWxsZXQgcG9pbnRzIGZyb20gZWFjaCBsaXN0OgogICAgLSAqKkxpc3QgMTogZGF0YSB2ZXJiczoqKgogICAgICAgIC0gYG11dGF0ZSgpYAogICAgICAgIC0gYGZpbHRlcigpYAogICAgICAgIC0gYHNlbGVjdCgpYAogICAgICAgIC0gYGFycmFuZ2UoKWAKICAgIC0gKipMaXN0IDI6IG1vcmUgZGF0YSB2ZXJiczoqKgogICAgICAgIC0gYGhlYWQoKWAgJiBgdGFpbCgpYAogICAgICAgIC0gYHJlbmFtZSgpYAogICAgICAgIC0gYHNhbXBsZV9uKClgCiAgICAgICAgLSBgc3VtbWFyaXNlKClgICYgYGdyb3VwX2J5KClgCiAgICAtICoqTGlzdCAzOiBzdW1tYXJ5IGZ1bmN0aW9uczoqKgogICAgICAgIC0gYGdsaW1wc2UoKWAKICAgICAgICAtIGBzdHIoKWAKICAgICAgICAtIGBzdW1tYXJ5KClgCiAgICAgICAgLSBgbnJvdygpYCAmIGBuY29sKClgCiAgICAgICAgLSBgbmFtZXMoKWAKICAgICAgICAtIGBjb2xuYW1lcygpYAogICAgICAgIC0gYFZpZXcoKWAgCiAgICAgICAgCi0gQXJlIHRoZXJlIGZ1bmN0aW9ucyB0aGF0IG5vIG9uZSBpbiB0aGUgZ3JvdXAgdW5kZXJzdG9vZD8KCgojIyBUaHJlZSBJbXBvcnRhbnQgQ29uY2VwdHMgKEFnYWluKQoKMS4gRGF0YSBjYW4gYmUgdXNlZnVsbHkgb3JnYW5pemVkIGludG8gdGFibGVzIHdpdGggImNhc2VzIiBhbmQgInZhcmlhYmxlcy4iICBXaXRoICJ0aWR5IGRhdGEiCiAgICAtIGV2ZXJ5IHJvdyBjb3JyZXNwb25kcyB0byBhIGRpc3RpbmN0IGNhc2UgKGUuZy4gYSBwZXJzb24sIGEgY2FyLCBhIHllYXIsIGEgY291bnRyeSBpbiBhIHllYXIpIAogICAgLSBjb2x1bW5zIHJlcHJlc2VudCB2YXJpYWJsZXMvZmVhdHVyZXMgb2YgdGhlIGNhc2VzCgojLiBEYXRhIGdyYXBoaWNzIGFuZCAiZ2x5cGgtcmVhZHkiIGRhdGEKICAgIC0gZWFjaCBjYXNlIGNvcnJlc3BvbmRzIHRvIGEgImdseXBoIiAobWFyaykgb24gdGhlIGdyYXBoCiAgICAtIGVhY2ggdmFyaWFibGUgdG8gYSBncmFwaGljYWwgYXR0cmlidXRlIG9mIHRoYXQgZ2x5cGggc3VjaCBhcyB4LSBvciB5LXBvc2l0aW9uLCBjb2xvciwgc2l6ZSwgbGVuZ3RoLCBzaGFwZSwgZXRjLiAKICAgIC0gc2ltaWxhciBzdG9yeSBhcHBsaWVzIGZvciBtb2RlbGluZyBwdXJwb3NlcwoKIy4gV2hlbiBkYXRhIGFyZSBub3QgeWV0IGluIGdseXBoLXJlYWR5IGZvcm0sIHlvdSBjYW4gdHJhbnNmb3JtIChpLmUuIHdyYW5nbGUpIHRoZW0gaW50byBnbHlwaC1yZWFkeSBmb3JtLiAgCiAgICAtIFN1Y2ggdHJhbnNmb3JtYXRpb25zIGFyZSBhY2NvbXBsaXNoZWQgYnkgcGVyZm9ybWluZyBvbmUgb3IgbW9yZSBvZiBhIHNtYWxsIHNldCBvZiBiYXNpYyBvcGVyYXRpb25zIG9uIGRhdGEgdGFibGVzCiAgICAtIFRoaXMgaXMgdGhlIHdvcmsgb2YgImRhdGEgdmVyYnMiIGFuZCBvdGhlciBmdW5jdGlvbnMKCgoKIyMgUHJlc2lkZW50aWFsIEludmVzdGlnYXRpb24gCgotIExldCdzIHRha2Ugc29tZSBvZiBvdXIgbmV3IHRvb2xzIGZvciBhIHNwaW4uLi4KLSBUaGUgYHByZXNpZGVudHNgIGRhdGEgYXJlIGF2YWlsYWJsZSBmcm9tIHRoZSBgdGlkeXZlcnNlYCBwYWNrYWdlIChhY3R1YWxseSBgZ2dwbG90MmAgd2hpY2ggd2FzIGxvYWRlZCBieSBgdGlkeXZlcnNlYCkKLSB3ZSdsbCBhZGQgYSBmZXcgb3RoZXIgcHJlc2lkZW50cyB0byB0aGUgZGF0YSBhcyB3ZWxsCgpgYGB7ciBlY2hvPVRSVUV9CmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGRjRGF0YSkKbGlicmFyeSh0aWJibGUpICAgICAjIHdlJ2xsIHVzZSBgdGliYmxlOjp0cmliYmxlKClgICB0byBzcGVjaWZ5IG5ldyByb3dzIApsaWJyYXJ5KGx1YnJpZGF0ZSkgICMgbmljZSBmdW5jdGlvbnMgZm9yIGhhbmRsaW5nIGRhdGVzCgojIGRhdGEgaW50YWtlCmRhdGEoInByZXNpZGVudGlhbCIsIHBhY2thZ2UgPSAiZ2dwbG90MiIpCgojIyBBZGQgc29tZSBtb3JlIGNhc2VzIHRvIHRoZSBkYXRhIHNldCAKIyB5b3UgY2FuIHNlYXJjaCB0aGUgaGVscCBmb3IgdGhlIGB0cmliYmxlYCBmdW5jdGlvbiBpZiB5b3Ugd2FudCB0byBmaWd1cmUgaXQgb3V0IHdoYXQncyBoYXBwZW5pbmcKQWRkUHJlcyA8LSAKICAgIHRpYmJsZTo6dHJpYmJsZSh+bmFtZSwgfnN0YXJ0LCB+ZW5kLCB+cGFydHksCiAgICAgICAgICAgICAgICAgICAgICJSb29zZXZlbHQiLCB5bWQoIjE5MzMtMDMtMDQiKSwgeW1kKCIxOTQ1LTA0LTEyIiksICJEZW1vY3JhdGljIiwKICAgICAgICAgICAgICAgICAgICAiVHJ1bWFuIiwgeW1kKCIxOTQ1LTA0LTEyIiksIHltZCgiMTk1My0wMS0yMCIpLCAiRGVtb2NyYXRpYyIsCiAgICAgICAgICAgICAgICAgICAgIlRydW1wIiwgeW1kKCIyMDE3LTAxLTIwIiksIHltZCgiMjAyMS0wMS0yMCIpLCAiUmVwdWJsaWNhbiIsIAogICAgICAgICAgICAgICAgICAgICJCaWRlbiIsIHltZCgiMjAyMS0wMS0yMCIpLCB5bWQodG9kYXkoKSksICJEZW1vY3JhdGljIikKCiMgYXBwZW5kIHRoZSByb3dzIG9mIG91ciB0d28gImRhdGEgZnJhbWVzIgpQcmVzaWRlbnRzIDwtIGJpbmRfcm93cyhwcmVzaWRlbnRpYWwsIEFkZFByZXMpCgpoZWFkKFByZXNpZGVudHMpCmBgYAoKCiMjIEd1aWRlZCBwcmFjdGljZSAKCjEuIHZhcmlvdXMgc3VtbWFyeS9leHBsb3JhdGlvbiBmdW5jdGlvbnMgdG8gbWVldCB0aGUgUHJlc2lkZW50cwoyLiBjYWxjdWxhdGUgYGR1cmF0aW9uYCBvZiBwcmVzaWRlbmN5IAozLiBzaG93IGFsbCByZWNvcmRzIGZvciBwcmVzaWRlbnRzIG5hbWVkICJCdXNoIgo0LiBzdWJzZXQgdGhlIGRhdGEgdG8gaW5jbHVkZSBvbmx5IGBuYW1lYCwgYHBhcnR5YCwgYGR1cmF0aW9uYAo1LiB3aGljaCAzIHByZXNpZGVudHMgc2VydmVkIHNob3J0ZXN0Pwo2LiB3aGljaCAzIHByZXNpZGVudHMgc2VydmVkIGxvbmdlc3Q/CjcuIHdoaWNoIHByZXNpZGVudHMgc2VydmVkIG1vcmUgdGhhbiA0IHllYXJzLCBidXQgbGVzcyB0aGFuIDggeWVhcnM/CjguIGludmVzdGlnYXRpbmcgdGhlIHBvd2VyIGJhbGFuY2UKICAgLSB3aGljaCBwYXJ0eSBoYXMgbW9zdCBwcmVzaWRlbnRzPwogICAtIHdoaWNoIHBhcnR5IHNwZW50IG1vc3QgZGF5cyBpbiBwb3dlcj8KOS4gYWRkIEhhcnJ5IFRydW1hbiAmIEZyYW5rbGluIEQuIFJvb3NldmVsdCwgdGhlbiByZXBlYXQgNi05CgoKIyBBbnN3ZXJzIAoKYGBge3J9CgoKCiMgMS4gc3VtbWFyeSBmdW5jdGlvbnMKZ2xpbXBzZShQcmVzaWRlbnRzKSAgIyB3aGF0J3MgdGhlIGJlbmVmaXQ/CnN0cihQcmVzaWRlbnRzKSAgICAgICMgPwpzdW1tYXJ5KFByZXNpZGVudHMpICAjIG5vdCBzbyB1c2VmdWw/IQpWaWV3KFByZXNpZGVudHMpICAgICAjIGNvbnNvbGUgcGxlYXNlIQoKCiMgc29tZSB3cmFuZ2xpbmcgClByZXNpZGVudHNfd3JhbmdsZWQgPC0gCiAgICBQcmVzaWRlbnRzICU+JQogICAgbXV0YXRlKGR1cmF0aW9uID0gZW5kIC0gc3RhcnQsICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgMgogICAgICAgICAgIG5hbWUgPSBpZl9lbHNlKG5hbWUgPT0gIkJ1c2giICYgc3RhcnQgPCB5bWQoIjIwMDAtMDEtMDEiKSwgICMgMwogICAgICAgICAgICAgICAgICAgICAgICAgIHRydWUgPSAiQnVzaCAoU3IpIiwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgZmFsc2UgPSBuYW1lKSkgJT4lCiAgICBzZWxlY3QobmFtZSwgcGFydHksIGR1cmF0aW9uKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyA0CiAgICAKCiMjIyBzb21lIHJlc3VsdHMKIyAzIGNoZWNrIHRoZSBidXNoZXMKdGFpbChQcmVzaWRlbnRzX3dyYW5nbGVkKSAKCiMgNiBzaG9ydGVzdApQcmVzaWRlbnRzX3dyYW5nbGVkICU+JQogICAgYXJyYW5nZShkdXJhdGlvbikgJT4lCiAgICBoZWFkKCkKCiMgNy4gbG9uZ2VzdCAgClByZXNpZGVudHNfd3JhbmdsZWQgJT4lCiAgICBhcnJhbmdlKGR1cmF0aW9uKSAlPiUKICAgIHRhaWwoKQoKUHJlc2lkZW50c193cmFuZ2xlZCAlPiUKICAgIGFycmFuZ2UoZGVzYyhkdXJhdGlvbikpICU+JQogICAgaGVhZCgpCgojIDguIG1vcmUgdGhhbiA0IHllYXJzLCBidXQgbGVzcyB0aGFuIDggeWVhcnMKClByZXNpZGVudHNfd3JhbmdsZWQgJT4lCiAgICBmaWx0ZXIoZHVyYXRpb24gPiAxNDYxLCBkdXJhdGlvbiA8IDI5MjIpCgoKIyA5LiBwYXJ0eSBiYWxhbmNlCgpQcmVzaWRlbnRzX3dyYW5nbGVkICU+JQogICAgZ3JvdXBfYnkocGFydHkpICU+JQogICAgc3VtbWFyaXNlKHRvdGFsID0gbigpLCAKICAgICAgICAgICAgICBpbl9wb3dlciA9IHN1bShkdXJhdGlvbikpCgojIHJlcGVhdCEKCmBgYAoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiV2VlayA2OiBXcmFuZ2xpbmcgYW5kIChtb3JlKSBEYXRhIFZlcmJzIgpzdWJ0aXRsZTogIkRhdGEgQ29tcHV0aW5nIENoYXB0ZXIgMTAiCmF1dGhvcjogfAogICAgICAgIHwgUHJlc2VudGVyOiBPbGl2aWEgQmVjawogICAgICAgIHwgQ29udGVudCBjcmVkaXQ6IE1hdHRoZXcgQmVja21hbgpkYXRlOiAiU2VwdGVtYmVyIDI4LCAyMDIyIgpvdXRwdXQ6IAogIHNsaWR5X3ByZXNlbnRhdGlvbjogZGVmYXVsdAogIGh0bWxfbm90ZWJvb2s6IGRlZmF1bHQKLS0tCgpgYGB7ciBpbmNsdWRlPUZBTFNFfQojIEZyb250bWF0dGVyCnJtKGxpc3QgPSBscygpKQoKIyBwYWNrYWdlcwpsaWJyYXJ5KG1vc2FpY0RhdGEpCmxpYnJhcnkoa25pdHIpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGRjRGF0YSkKCmBgYAoKCiMgQWdlbmRhCgotIEJhc2ljIEluZm8gYWJvdXQgdGhlIE1pZHRlcm0gYW5kIEZpbmFsIFByb2plY3QKLSBEaXNjdXNzaW9uIG9mIGNvbW1vbiBpc3N1ZXMvcXVlc3Rpb25zIAotIFJldmlldyBvZiBkYXRhIHZlcmJzICYgc3VtbWFyeSBmdW5jdGlvbnMgd2l0aCB5b3VyIHNtYWxsIGdyb3VwCi0gRGlzY3Vzc2lvbiBvZiBuZXcgZnVuY3Rpb25zIGFuZCBrZXkgY29uY2VwdHMKLSBHdWlkZWQgZXhhbXBsZSBoaWdobGlnaHRpbmcgc2V2ZXJhbCBuZXcgZGF0YSB2ZXJicwotIFJTdHVkaW8gQ29uY2VwdCBNYXBzOiA8aHR0cHM6Ly9naXRodWIuY29tL3JzdHVkaW8vY29uY2VwdC1tYXBzPgoKCiMgTWlkdGVybSBhbmQgRmluYWwgUHJvamVjdAoKIyMgTWlkdGVybSAKCi0gT2N0b2JlciAyNHRoIChGcmlkYXkpIGR1cmluZyBjbGFzcyAKLSBPbiBwYXBlciAKLSBBbnl0aGluZyB3ZSBoYXZlIGRvbmUgaW4gY2xhc3MgYmVmb3JlIHRoZW4gaXMgZmFpciBnYW1lIGZvciBxdWVzdGlvbnMKLSBUaGlzIGlzIG5vdCBnb2luZyB0byBiZSBhIGRpZmZpY3VsdCBleGFtLiBJdCB3aWxsIGNvdmVyIG1hdGVyaWFsIGZyb20gYHRpZHl2ZXJzZWAgZnVuY3Rpb25zIGFuZCBHaXRIdWIgd29ya2Zsb3dzLiAKCgpUbyBwcmFjdGljZTogCi0gTG9vayB0aHJvdWdoIHRleHRib29rIGFuZCByZWFkIHRocm91Z2ggc29tZSBvZiB0aGUgcHJvYmxlbXMgbm90IGFzc2lnbmVkIAotIE1ha2Ugc3VyZSB5b3UgdW5kZXJzdGFuZCBldmVyeXRoaW5nIGZyb20gdGhlIGFjdGl2aXRpZXMsIGhvbWV3b3JrcywgYW5kIHJlYWRpbmcgcXVpenplcwotIElmIHlvdSBoYXZlIHF1ZXN0aW9ucywgYXNrISBQb3N0IGdlbmVyYWwgY29udGVudCBxdWVzdGlvbiBvbiBDYW52YXMgRGlzY3Vzc2lvbiBib2FyZCBzbyB5b3VyIHBlZXJzIGNhbiBsZWFybiB0b28KLSBJIHdpbGwgcHJvdmlkZSBzb21lIHByYWN0aWNlIHF1ZXN0aW9ucyBzb29uIAoKCgojIyBGaW5hbCBQcm9qZWN0IAoKLSBNdWx0aXBsZSBkdWUgZGF0ZXMgKG9uIGNhbnZhcykKLSBHb2FsIGlzIHRvIGRvIGEgInByb2Zlc3Npb25hbCIgZGF0YSBhbmFseXNpcyB0aGF0IGlzIFJFUFJPRFVDSUJMRSAKICAtIFJlc2VhcmNoIHF1ZXN0aW9uCiAgLSBEYXRhIEV4cGxvcmF0aW9uCiAgLSBBbnN3ZXIgeW91ciBxdWVzdGlvbiB3aXRoIHdyYW5nbGVkIGRhdGEgYW5kIGdyYXBocyAKICAgIC0gTk8gU1RBVElTVElDQUwgQU5BTFlTSVMKLSBZb3UgbmVlZCB0byBmaW5kIHlvdXIgb3duIGRhdGEgc2V0cyAobWluaW11bSBvZiAyKQoKCiMgUk1hcmtkb3duIFN0dWZmCgojIyBSIE1hcmtkb3duIC0gVGV4dCB2ZXJzdXMgUiBjaHVuawoKV2hlbiB3ZSB3YW50IHRvIHdyaXRlIHBsYWluIHRleHQsIHdlIGp1c3Qgd3JpdGUgYXMgbm9ybWFsLiAKCldoZW4gd2Ugd2FudCB0byB1c2UgYSBoZWFkZXIgd2UgdXNlICMgYmVmb3JlIG91ciB0ZXh0IAoKV2hlbiB3ZSB3YW50IHRvIHdyaXRlIFIgY29kZSwgd2UgdXNlIGFuIFIgY2h1Y2s6CgpgYGB7cn0KeCA8LSAxOjEwCnN1bSh4KQpgYGAKCgoKIyMgUiBOb3RlYm9vayB2cyBSIE1hcmtkb3duIENvbXBhcmlzb24KCiAgfCAgICAgICAgICAgICAgICAgIHwgIFIgTm90ZWJvb2sgICAgICAgICAgICB8ICBSIE1hcmtkb3duICAgICAgfAogIHw6LS0tLS0tLS0tLS0tLS0tLS18Oi0tLS0tLS0tLS0tLS0tLS0tLS0tLS06fDotLS0tLS0tLS0tLS0tLS0tOnwKICB8IFNvdXJjZSBkb2N1bWVudCAgfCBGaWxlTmFtZS5SbWQgICAgICAgICAgIHwgRmlsZU5hbWUuUm1kICAgICB8CiAgfCBUeXBlc2V0dGluZyBzeW50YXggfCBtYXJrZG93biAgICAgICAgICAgICB8IG1hcmtkb3duICAgfAogIHwgWUFNTCBIZWFkZXIgICAgICB8IGBvdXRwdXQ6IGh0bWxfbm90ZWJvb2tgIHwgYG91dHB1dDogaHRtbF9kb2N1bWVudGAgIHwKICB8IGNvbXBpbGUgYnV0dG9uIHRleHQgfCAiUHJldmlldyIgb3IgIlByZXZpZXcgTm90ZWJvb2siIHwgIktuaXQgdG8gSFRNTCIgb3IgIktuaXQiIHwKICB8IGNvbXBpbGUgYnV0dG9uIGljb24gIHwgIG5vdGVib29rICAgICAgICAgfCBibHVlIHlhcm4gYmFsbCAgfAogIHwgT3V0cHV0IGZpbGUgZGVmYXVsdCAgfCBGaWxlTmFtZS5uYi5odG1sICB8IEZpbGVOYW1lLmh0bWwgIHwKICB8IENvZGUgY2h1bmsgaGFuZGxpbmcgIHwgUnVuIFIgY29kZSBmaXJzdCAgfCBSdW5zIFIgY29kZSB3aGVuIHJlbmRlcmVkIHwKICB8IC5SbWQgc291cmNlIGVtYmVkZGVkPyB8ICoqWUVTKiogICAgICAgICAgICAgIHwgKipOTyoqICAgIHwKCgoKCgoKIyMgRGlzY3Vzc2lvbi9SZXZpZXcgVGFzazogCgotIEV4cGxhaW4gYSBmZXcgYnVsbGV0IHBvaW50cyBmcm9tIGVhY2ggbGlzdDoKICAgIC0gKipMaXN0IDE6IGRhdGEgdmVyYnM6KioKICAgICAgICAtIGBtdXRhdGUoKWAKICAgICAgICAtIGBmaWx0ZXIoKWAKICAgICAgICAtIGBzZWxlY3QoKWAKICAgICAgICAtIGBhcnJhbmdlKClgCiAgICAtICoqTGlzdCAyOiBtb3JlIGRhdGEgdmVyYnM6KioKICAgICAgICAtIGBoZWFkKClgICYgYHRhaWwoKWAKICAgICAgICAtIGByZW5hbWUoKWAKICAgICAgICAtIGBzYW1wbGVfbigpYAogICAgICAgIC0gYHN1bW1hcmlzZSgpYCAmIGBncm91cF9ieSgpYAogICAgLSAqKkxpc3QgMzogc3VtbWFyeSBmdW5jdGlvbnM6KioKICAgICAgICAtIGBnbGltcHNlKClgCiAgICAgICAgLSBgc3RyKClgCiAgICAgICAgLSBgc3VtbWFyeSgpYAogICAgICAgIC0gYG5yb3coKWAgJiBgbmNvbCgpYAogICAgICAgIC0gYG5hbWVzKClgCiAgICAgICAgLSBgY29sbmFtZXMoKWAKICAgICAgICAtIGBWaWV3KClgIAogICAgICAgIAotIEFyZSB0aGVyZSBmdW5jdGlvbnMgdGhhdCBubyBvbmUgaW4gdGhlIGdyb3VwIHVuZGVyc3Rvb2Q/CgoKIyBUaHJlZSBJbXBvcnRhbnQgQ29uY2VwdHMgKEFnYWluKQoKMS4gRGF0YSBjYW4gYmUgdXNlZnVsbHkgb3JnYW5pemVkIGludG8gdGFibGVzIHdpdGggImNhc2VzIiBhbmQgInZhcmlhYmxlcy4iICBXaXRoICJ0aWR5IGRhdGEiCiAgICAtIGV2ZXJ5IHJvdyBjb3JyZXNwb25kcyB0byBhIGRpc3RpbmN0IGNhc2UgKGUuZy4gYSBwZXJzb24sIGEgY2FyLCBhIHllYXIsIGEgY291bnRyeSBpbiBhIHllYXIpIAogICAgLSBjb2x1bW5zIHJlcHJlc2VudCB2YXJpYWJsZXMvZmVhdHVyZXMgb2YgdGhlIGNhc2VzCgojLiBEYXRhIGdyYXBoaWNzIGFuZCAiZ2x5cGgtcmVhZHkiIGRhdGEKICAgIC0gZWFjaCBjYXNlIGNvcnJlc3BvbmRzIHRvIGEgImdseXBoIiAobWFyaykgb24gdGhlIGdyYXBoCiAgICAtIGVhY2ggdmFyaWFibGUgdG8gYSBncmFwaGljYWwgYXR0cmlidXRlIG9mIHRoYXQgZ2x5cGggc3VjaCBhcyB4LSBvciB5LXBvc2l0aW9uLCBjb2xvciwgc2l6ZSwgbGVuZ3RoLCBzaGFwZSwgZXRjLiAKICAgIC0gc2ltaWxhciBzdG9yeSBhcHBsaWVzIGZvciBtb2RlbGluZyBwdXJwb3NlcwoKIy4gV2hlbiBkYXRhIGFyZSBub3QgeWV0IGluIGdseXBoLXJlYWR5IGZvcm0sIHlvdSBjYW4gdHJhbnNmb3JtIChpLmUuIHdyYW5nbGUpIHRoZW0gaW50byBnbHlwaC1yZWFkeSBmb3JtLiAgCiAgICAtIFN1Y2ggdHJhbnNmb3JtYXRpb25zIGFyZSBhY2NvbXBsaXNoZWQgYnkgcGVyZm9ybWluZyBvbmUgb3IgbW9yZSBvZiBhIHNtYWxsIHNldCBvZiBiYXNpYyBvcGVyYXRpb25zIG9uIGRhdGEgdGFibGVzCiAgICAtIFRoaXMgaXMgdGhlIHdvcmsgb2YgImRhdGEgdmVyYnMiIGFuZCBvdGhlciBmdW5jdGlvbnMKCgoKIyBQcmVzaWRlbnRpYWwgSW52ZXN0aWdhdGlvbiAKCi0gTGV0J3MgdGFrZSBzb21lIG9mIG91ciBuZXcgdG9vbHMgZm9yIGEgc3Bpbi4uLgotIFRoZSBgcHJlc2lkZW50c2AgZGF0YSBhcmUgYXZhaWxhYmxlIGZyb20gdGhlIGB0aWR5dmVyc2VgIHBhY2thZ2UgKGFjdHVhbGx5IGBnZ3Bsb3QyYCB3aGljaCB3YXMgbG9hZGVkIGJ5IGB0aWR5dmVyc2VgKQotIHdlJ2xsIGFkZCBhIGZldyBvdGhlciBwcmVzaWRlbnRzIHRvIHRoZSBkYXRhIGFzIHdlbGwKCmBgYHtyIGVjaG89VFJVRX0KbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkoZGNEYXRhKQpsaWJyYXJ5KHRpYmJsZSkgICAgICMgd2UnbGwgdXNlIGB0aWJibGU6OnRyaWJibGUoKWAgIHRvIHNwZWNpZnkgbmV3IHJvd3MgCmxpYnJhcnkobHVicmlkYXRlKSAgIyBuaWNlIGZ1bmN0aW9ucyBmb3IgaGFuZGxpbmcgZGF0ZXMKCiMgZGF0YSBpbnRha2UKZGF0YSgicHJlc2lkZW50aWFsIiwgcGFja2FnZSA9ICJnZ3Bsb3QyIikKCiMjIEFkZCBzb21lIG1vcmUgY2FzZXMgdG8gdGhlIGRhdGEgc2V0IAojIHlvdSBjYW4gc2VhcmNoIHRoZSBoZWxwIGZvciB0aGUgYHRyaWJibGVgIGZ1bmN0aW9uIGlmIHlvdSB3YW50IHRvIGZpZ3VyZSBpdCBvdXQgd2hhdCdzIGhhcHBlbmluZwpBZGRQcmVzIDwtIAogICAgdGliYmxlOjp0cmliYmxlKH5uYW1lLCB+c3RhcnQsIH5lbmQsIH5wYXJ0eSwKICAgICAgICAgICAgICAgICAgICAgIlJvb3NldmVsdCIsIHltZCgiMTkzMy0wMy0wNCIpLCB5bWQoIjE5NDUtMDQtMTIiKSwgIkRlbW9jcmF0aWMiLAogICAgICAgICAgICAgICAgICAgICJUcnVtYW4iLCB5bWQoIjE5NDUtMDQtMTIiKSwgeW1kKCIxOTUzLTAxLTIwIiksICJEZW1vY3JhdGljIiwKICAgICAgICAgICAgICAgICAgICAiVHJ1bXAiLCB5bWQoIjIwMTctMDEtMjAiKSwgeW1kKCIyMDIxLTAxLTIwIiksICJSZXB1YmxpY2FuIiwgCiAgICAgICAgICAgICAgICAgICAgIkJpZGVuIiwgeW1kKCIyMDIxLTAxLTIwIiksIHltZCh0b2RheSgpKSwgIkRlbW9jcmF0aWMiKQoKIyBhcHBlbmQgdGhlIHJvd3Mgb2Ygb3VyIHR3byAiZGF0YSBmcmFtZXMiClByZXNpZGVudHMgPC0gYmluZF9yb3dzKHByZXNpZGVudGlhbCwgQWRkUHJlcykKCmhlYWQoUHJlc2lkZW50cykKYGBgCgoKIyMgR3VpZGVkIHByYWN0aWNlIAoKMS4gdmFyaW91cyBzdW1tYXJ5L2V4cGxvcmF0aW9uIGZ1bmN0aW9ucyB0byBtZWV0IHRoZSBQcmVzaWRlbnRzCjIuIGNhbGN1bGF0ZSBgZHVyYXRpb25gIG9mIHByZXNpZGVuY3kgCjMuIHNob3cgYWxsIHJlY29yZHMgZm9yIHByZXNpZGVudHMgbmFtZWQgIkJ1c2giCjQuIHN1YnNldCB0aGUgZGF0YSB0byBpbmNsdWRlIG9ubHkgYG5hbWVgLCBgcGFydHlgLCBgZHVyYXRpb25gCjUuIHdoaWNoIDMgcHJlc2lkZW50cyBzZXJ2ZWQgc2hvcnRlc3Q/CjYuIHdoaWNoIDMgcHJlc2lkZW50cyBzZXJ2ZWQgbG9uZ2VzdD8KNy4gd2hpY2ggcHJlc2lkZW50cyBzZXJ2ZWQgbW9yZSB0aGFuIDQgeWVhcnMsIGJ1dCBsZXNzIHRoYW4gOCB5ZWFycz8KOC4gaW52ZXN0aWdhdGluZyB0aGUgcG93ZXIgYmFsYW5jZQogICAtIHdoaWNoIHBhcnR5IGhhcyBtb3N0IHByZXNpZGVudHM/CiAgIC0gd2hpY2ggcGFydHkgc3BlbnQgbW9zdCBkYXlzIGluIHBvd2VyPwo5LiBhZGQgSGFycnkgVHJ1bWFuICYgRnJhbmtsaW4gRC4gUm9vc2V2ZWx0LCB0aGVuIHJlcGVhdCA2LTkKCgojIEFuc3dlcnMgCgpgYGB7cn0KIyAxLiBzdW1tYXJ5IGZ1bmN0aW9ucwpnbGltcHNlKFByZXNpZGVudHMpICAjIHdoYXQncyB0aGUgYmVuZWZpdD8Kc3RyKFByZXNpZGVudHMpICAgICAgIyA/CnN1bW1hcnkoUHJlc2lkZW50cykgICMgbm90IHNvIHVzZWZ1bD8hCiNWaWV3KFByZXNpZGVudHMpICAgICAjIGNvbnNvbGUgcGxlYXNlIQoKCiMgc29tZSB3cmFuZ2xpbmcgClByZXNpZGVudHNfd3JhbmdsZWQgPC0gCiAgICBQcmVzaWRlbnRzICU+JQogICAgbXV0YXRlKGR1cmF0aW9uID0gZW5kIC0gc3RhcnQsICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgMgogICAgICAgICAgIG5hbWUgPSBpZl9lbHNlKG5hbWUgPT0gIkJ1c2giICYgc3RhcnQgPCB5bWQoIjIwMDAtMDEtMDEiKSwgICMgMwogICAgICAgICAgICAgICAgICAgICAgICAgIHRydWUgPSAiQnVzaCAoU3IpIiwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgZmFsc2UgPSBuYW1lKSkgJT4lCiAgICBzZWxlY3QobmFtZSwgcGFydHksIGR1cmF0aW9uKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyA0CiAgICAKCiMjIyBzb21lIHJlc3VsdHMKIyAzIGNoZWNrIHRoZSBidXNoZXMKdGFpbChQcmVzaWRlbnRzX3dyYW5nbGVkKSAKCiMgNiBzaG9ydGVzdApQcmVzaWRlbnRzX3dyYW5nbGVkICU+JQogICAgYXJyYW5nZShkdXJhdGlvbikgJT4lCiAgICBoZWFkKCkKCiMgNy4gbG9uZ2VzdCAgClByZXNpZGVudHNfd3JhbmdsZWQgJT4lCiAgICBhcnJhbmdlKGR1cmF0aW9uKSAlPiUKICAgIHRhaWwoKQoKUHJlc2lkZW50c193cmFuZ2xlZCAlPiUKICAgIGFycmFuZ2UoZGVzYyhkdXJhdGlvbikpICU+JQogICAgaGVhZCgpCgojIDguIG1vcmUgdGhhbiA0IHllYXJzLCBidXQgbGVzcyB0aGFuIDggeWVhcnMKClByZXNpZGVudHNfd3JhbmdsZWQgJT4lCiAgICBmaWx0ZXIoZHVyYXRpb24gPiAxNDYxLCBkdXJhdGlvbiA8IDI5MjIpCgoKIyA5LiBwYXJ0eSBiYWxhbmNlCgpQcmVzaWRlbnRzX3dyYW5nbGVkICU+JQogICAgZ3JvdXBfYnkocGFydHkpICU+JQogICAgc3VtbWFyaXNlKHRvdGFsID0gbigpLCAKICAgICAgICAgICAgICBpbl9wb3dlciA9IHN1bShkdXJhdGlvbikpCgojIHJlcGVhdCEKCmBgYAoK</div>
 
 
 

@@ -23,7 +23,7 @@ library(dcData)
 ```
 
 
-## Agenda
+# Agenda
 
 - Basic Info about the Midterm and Final Project
 - Discussion of common issues/questions 
@@ -32,6 +32,8 @@ library(dcData)
 - Guided example highlighting several new data verbs
 - RStudio Concept Maps: <https://github.com/rstudio/concept-maps>
 
+
+# Midterm and Final Project
 
 ## Midterm 
 
@@ -60,6 +62,7 @@ To practice:
 - You need to find your own data sets (minimum of 2)
 
 
+# RMarkdown Stuff
 
 ## R Markdown - Text versus R chunk
 
@@ -119,7 +122,7 @@ sum(x)
 - Are there functions that no one in the group understood?
 
 
-## Three Important Concepts (Again)
+# Three Important Concepts (Again)
 
 1. Data can be usefully organized into tables with "cases" and "variables."  With "tidy data"
     - every row corresponds to a distinct case (e.g. a person, a car, a year, a country in a year) 
@@ -136,7 +139,7 @@ sum(x)
 
 
 
-## Presidential Investigation 
+# Presidential Investigation 
 
 - Let's take some of our new tools for a spin...
 - The `presidents` data are available from the `tidyverse` package (actually `ggplot2` which was loaded by `tidyverse`)
@@ -185,14 +188,11 @@ head(Presidents)
 # Answers 
 
 ```{r}
-
-
-
 # 1. summary functions
 glimpse(Presidents)  # what's the benefit?
 str(Presidents)      # ?
 summary(Presidents)  # not so useful?!
-View(Presidents)     # console please!
+#View(Presidents)     # console please!
 
 
 # some wrangling 
