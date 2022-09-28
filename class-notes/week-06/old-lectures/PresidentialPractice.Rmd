@@ -1,0 +1,109 @@
+---
+title: "Presidential Practice"
+subtitle: "Guided Example"
+author: "Dr. Matthew Beckman"
+output: html_notebook
+---
+
+
+```{r include=FALSE}
+# clean up
+rm(list = ls())
+
+# packages
+library(tidyverse)   # also loads `ggplot2` package, which includes our data
+library(tibble)      # `tibble::tribble()` will help us add more presidents 
+library(lubridate)   # nice functions for handling dates
+
+# data intake
+data("presidential", package = "ggplot2")
+
+# search help documentation for `tribble` function if you're curious how this works
+AddPres <- 
+    tibble::tribble(~name, ~start, ~end, ~party,
+                    "Roosevelt", ymd("1933-03-04"), ymd("1945-04-12"), "Democratic",
+                     "Truman", ymd("1945-04-12"), ymd("1953-01-20"), "Democratic",
+                    "Trump", ymd("2017-01-20"), ymd("2021-01-20"), "Republican", 
+                    "Biden", ymd("2021-01-20"), ymd(today()), "Democratic")
+
+# append the rows of our two "data frames"
+Presidents <- bind_rows(presidential, AddPres)
+```
+
+
+## Guided practice (Part 1) 
+
+1. various summary functions to meet the `Presidents`
+2. calculate `duration` of presidency 
+3. show all records for presidents named "Bush"
+4. subset the data to include only `name`, `party`, `duration`
+
+```{r}
+#1
+glimpse(Presidents)  # what's the benefit?
+str(Presidents)      # ?
+summary(Presidents)  # not so useful?!
+View(Presidents)     # console please!
+
+#2
+
+Presidents<-Presidents %>% 
+  mutate(duration= end-start, name = if_else(name == "Bush" & start < ymd("2000-01-01"),"Bush (Sr)", name)) %>%
+  select(name,party,duration)
+
+```
+
+
+## Guided practice (Part 2)
+
+5. which 3 presidents served shortest?
+6. which 3 presidents served longest?
+7. which presidents served more than 4 years, but less than 8 years?
+8. investigating the power balance
+   - which party has most presidents?
+   - which party spent most days in power?
+
+```{r}
+#5 and 6
+Presidents %>%
+  arrange(duration)%>%
+  head(3)
+Presidents %>%
+  arrange(desc(duration))%>%
+  head(3)
+
+#7
+Presidents %>%
+    filter(duration > 1461, duration < 2922)
+
+
+#8
+Presidents %>% 
+  group_by(party) %>%
+  summarise(count= n(), Totaldays= sum(duration))
+ 
+```
+
+
+
+
+9. add Harry Truman & Franklin D. Roosevelt, then repeat 5-8
+
+
+```{r}
+library(dcData)
+head(Minneapolis2013)
+
+Minneapolis2013 %>%
+  group_by(First) %>%
+  summarise(count=n()) %>%
+  select(First) 
+  
+
+Minneapolis2013 %>%
+  mutate(First= if_else(First %in% minorcand$First,"minor",First),Second= if_else(Second %in% minorcand$First,"minor",Second) )
+
+
+```
+
+
