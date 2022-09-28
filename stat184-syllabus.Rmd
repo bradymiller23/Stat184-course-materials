@@ -168,13 +168,13 @@ Weekly homework assignments will be assigned after class in order to assess unde
 
 ##### Exam 
 
-Details will be provided. 
+Midterm Exam will be held on October 24th in class. 
 
 ##### Final Project
 
 <!-- A successful project will find one or more real & interesting data sets, and use their R programming skills to tell a story that reveals insights from the data.  The assigned activities from the Data Computing text book are good examples of the scale and scope of work expected for a successful project, with the differences that you are expected to do the work independently using your own data (not loaded from an R package), and you are responsible for producing the narrative explaining your investigation and conclusions as you work through the analysis. -->
 
-The project will be due by 5:00 PM on the first day of Finals Week. 
+The project will be due by 11:59 PM on December 12th (the first day of Finals Week). 
 
 The project will likely consist of two parts: A well-written document including all R code used, and likely a 3-4 minute presentation of your project. The assigned weekly projects from the Data Computing book are good examples of the scale and scope of work expected for a successful project, with the differences that you are expected to do the work independently, the primary data will not be loaded from an R package, and you are responsible for producing the narrative explaining your investigation and conclusions as you work through the analysis.
 
