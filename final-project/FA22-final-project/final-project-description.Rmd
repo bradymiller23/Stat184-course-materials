@@ -1,0 +1,65 @@
+---
+title: 'STAT 184 Final Project'
+author: ""
+date: "Due: TBD"
+output: pdf_document
+---
+
+#  Final Project Description
+
+Polished & professional written investigation of your final project topic. The result should be something you would be proud to include in a work portfolio or discuss in an interview or cover letter for an internship, research opportunity, job, etc. Your project GitHub Repo should be "self-contained" meaning that it includes access to the source data such that another person (e.g., STAT 184 grader, future supervisor) can clone your provided GitHub Repo and execute your entire analysis without errors.
+
+The weekly group activities in the Data Computing text book are good examples of the type of work expected for a successful project, with the differences that you are expected to do the work independently (or in your group) using your own data (not loaded from an R package), and you are responsible for the narrative explaining your reasoning and conclusions as you work through the analysis.
+
+## Groups
+
+Students can work independently or in groups of 2. You can pick your groups, or you can tell me you want to be in a group and I will help you find someone. 
+
+## Scoring
+The project is worth 30% of the final course grade and will be evaluated according to the following: 
+
+- **Reproducible Research**: The final product is published to a self-contained GitHub repository and presented as a and RNotebook.  Your actual analysis should be an HTML file with embedded .Rmd (like usual) that can be run without errors by the instructor or graders without prior exposure to the project or modification of your code.
+
+- **Data Access**: The project uses 2 or more real data sets.  The primary data should not be loaded from an R package, but it may be joined to data available in an R package.  For example, the primary data could be joined to a data set like `CountryCentroids` from the `dcData` package if `iso_a3` country labels or latitude/longitude information are needed. Data access should be reproduced in the .Rmd file (e.g. read in from URL, scrape from web, or in a CSV in the GitHub repo).  If you use a live data source (e.g. from the web), it's a good idea to save a static copy of the data in your GitHub repo as a backup just incase the source data fails or changes the day your project is due (!)
+
+- **Data Wrangling**: The project demonstrates proficiency with data wrangling techniques learned in STAT 184 (e.g., `dplyr`, `tidyr`)
+
+- **Visualization**: The project demonstrates proficiency with graphics tools learned in STAT 184 (e.g. `ggplot()`, choropleths, leaflets) to explore several variables of interest. At least one graphic should shows a useful visualization involving 3 or more variables through faceting, coloring, linetype, etc.
+
+- **Code Quality**: Code conforms to syntax and style conventions. The easiest one to pick is the on in Data Computing text book (e.g. chain syntax, readability, variable and table naming, commented code)
+
+- **Narrative Quality**: The project is a complete report that describes the background and context of the data set as well as detailed rationale of each decision and explanation of each observation in the analysis.
+
+- **Overall Quality**: Judgment of holistic quality of project.  Reports should follow a logical progression and maintain a polished, professional appearance.
+
+
+## Project Milestones
+
+- October 28, 2022 @ 11:59pm: Submit project ideas (on canvas only)
+- November 2, 2022 during class: Final Project Teams Lock
+- November 18, 2022 @ 11:59pm: Initial EDA Due
+- December 1, 2022 @ 11:59pm: [Optional] Submit draft of Final Project Report for peer review
+- December 7, 2022 @ 11:59pm: [Optional] Peer Reviews Due (review other group projects--only required if you had submitted a draft to receive peer review)
+- December 12, 2022 @ 11:59pm: Final Project Report Due
+- December 12, 2022 @ 11:59pm: Peer Evaluation of Project Contributions
+
+More detailed requirements for each part will be announced on Canvas and in class over the next few weeks. 
+
+Each student/group must choose at least 2 different data sets.  Data set approval is strongly recommended in order to be confident that you have chosen a data set likely to align with the goals of the Project.  Students may request data set approval as many times as necessary until they have an appropriate data set for the project.  Students may also submit a complete draft of their project for Peer Review.  All students that submit a draft project for Peer Review are required to participate by reviewing project drafts submitted by their peers, but peer reviews are not available/required of students who have opted not to submit a project draft of their own.  Interim feedback requests must be made & associated materials submitted at least two weeks before the project due date.
+
+## Getting Started
+
+For some it will seem daunting to start from scratch looking for one or more "interesting" data sets.  There are lots of useful repositories out there.  Here are a few links to get you started, but please feel free to use any data that interest you!  
+
+<https://www.springboard.com/blog/free-public-data-sets-data-science-project/>
+
+<https://www.dataquest.io/blog/free-datasets-for-projects/>
+
+<https://data.cityofnewyork.us/>
+
+<http://www.icpsr.umich.edu/icpsrweb/ICPSR/>
+
+<http://www.datasciencecentral.com/profiles/blogs/great-github-list-of-public-data-sets>
+
+<https://github.com/fivethirtyeight/data>
+
