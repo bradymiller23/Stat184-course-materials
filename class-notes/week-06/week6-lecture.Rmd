@@ -52,7 +52,7 @@ To practice:
 ## Final Project 
 
 - Multiple due dates (on canvas)
-- Goal is to do a "professional" data analysis. 
+- Goal is to do a "professional" data analysis that is REPRODUCIBLE 
   - Research question
   - Data Exploration
   - Answer your question with wrangled data and graphs 
