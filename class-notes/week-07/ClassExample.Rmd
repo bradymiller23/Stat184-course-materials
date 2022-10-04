@@ -1,0 +1,82 @@
+---
+title: "Guided Practice"
+output: html_notebook
+---
+
+
+```{r}
+library(tidyverse)
+library(esquisse)
+library(dcData)
+
+
+```
+
+
+
+
+
+
+
+
+```{r}
+Grades <- read_csv("class-notes/week-07/grades.csv")
+Grades %>% head(3)
+Courses <- read_csv("class-notes/week-07/coursesUpdated.csv")
+Courses %>% head(3)
+GradePoint <- read_csv("class-notes/week-07/grade-to-number.csv")
+GradePoint %>% head(3)
+```
+
+
+1. How many students in each department?
+
+```{r}
+grades %>%
+  left_join(Courses,by = c("lionpathCourseID" = "lionpathCourseID" ))%>%
+  group_by(dept)%>%
+  summarise(Totalstud = n_distinct(studentID))
+```
+
+
+2. What fraction of grades are below B+ in each department?
+
+
+```{r}
+left_join(Grades, Courses, by = c("lionpathCourseID" = "lionpathCourseID")) %>%
+  mutate(BelowB_plus = if_else(grade %in% c("B+", "A-", "A"), 0, 1)) %>%
+  group_by(dept) %>%
+  summarise(frac_below_B_plus = sum(BelowB_plus) / n() )
+
+```
+
+3. What's the grade-point average (GPA) for each student?
+
+
+```{r}
+left_join(Grades, GradePoint) %>%
+  group_by(studentID) %>%
+  summarise(GPA = mean(gradepoint, na.rm=TRUE)) 
+```
+
+4. Grade-point average for each department
+
+
+```{r}
+Grad_dept <- left_join(Grades, Courses)
+left_join(Grad_dept, GradePoint) %>%
+  group_by(dept) %>%
+  summarise(avgGPA = mean(gradepoint, na.rm = TRUE))
+
+
+#equivalently 
+# We can do this because we know there are not missing values in GradePoint
+left_join(Grades, GradePoint) %>%
+  left_join(Courses) %>%
+  group_by(dept) %>%
+  summarise(avgGPA = mean(gradepoint, na.rm = TRUE))
+```
+
+
+
+

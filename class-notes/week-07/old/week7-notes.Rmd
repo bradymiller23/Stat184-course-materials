@@ -1,0 +1,225 @@
+---
+title: "Week 7 Class Notes"
+output:
+  html_document:
+    fig_caption: yes
+    theme: flatly
+  pdf_document: default
+---
+
+```{r include=FALSE}
+library(dplyr)
+library(ggplot2)
+library(printr)
+library(mosaic)
+knitr::opts_chunk$set(tidy=FALSE, message=FALSE)
+options(width = 80)
+```
+----
+
+## Combining data from different sources
+
+Glyph-ready data often combines data from different sources.
+
+* Perhaps they come from different experiments or institutions.
+* Often, they were collected with different objectives than yours.
+* Perhaps they are completely different types of data, 
+
+----
+
+## Example: Medicare data
+
+* `MedicareProviders`: Name and location
+* `DirectRecoveryGroups`: Descriptions of standardized medical procedures
+* `MedicareCharges`: Charges and payments for different DRGs by different providers
+* `ZipDemography`: Population and age structure in each ZIP code.
+
+----
+
+## Relational databases
+
+Storing data in separate tables can be beneficial even when the data are coming from the same source: 
+
+* There is no "one size fits all" glyph-ready format.  Often the kinds of analysis that will be done are not specifically anticipated when data are collected. 
+* Glyph-ready data often contains **redundancies**.  This makes it hard to update or correct data.
+
+**Strategy**: Don't even try to smash all data into one big table.  Instead, join related tables as needed.
+
+----
+
+## Example: Grades and Enrollment
+
+```{r}
+Grades <- read.file("http://tiny.cc/mosaic/grades.csv")
+```
+
+```{r echo=FALSE}
+set.seed(101)
+Grades %>% sample_n(size=4)
+```
+
+```{r}
+Courses <- read.file("http://tiny.cc/mosaic/courses.csv")
+```
+```{r echo=FALSE}
+set.seed(101)
+Courses %>% sample_n(size=3)
+```
+
+----
+
+## Joins
+
+A *join* is a data verb that combines two tables. 
+
+- These care called the *left* and the *right* tables.
+
+There are several kinds of join.
+
+* All involve establishing a correspondance --- a match --- between each case in the left table and zero or more cases in the right table.
+* The various joins differ in how they handle multiple matches or missing matches.
+
+--------------
+
+## Example: Average class size
+
+**Goal**: Figure out the average class size seen by each student at a small college.
+
+* `enroll` comes from `Courses` table.
+* Student (`sid`) comes from `Grades`.
+* `sessionID` is in both tables.
+
+```{r}
+Grades %>%
+  left_join(Courses) %>% sample_n(size=4)
+```
+
+-------
+
+Once `Courses` and `Grades` are joined, it's straightforward to find the average enrollment seen by each student.
+
+```{r}
+AveClassEachStudent <- Grades %>% 
+  left_join(Courses) %>%
+  group_by(sid) %>%
+  summarise(ave_enroll = mean(enroll, na.rm=TRUE))
+```
+```{r echo=FALSE}
+AveClassEachStudent %>% sample_n(3) # look at just a few
+```
+
+
+---- 
+
+## Establishing a match between cases
+
+A match between a case in the *left* table and a case in the *right* table is made based on the values in pairs of corresponding variables.
+
+* **You** specify which pairs to use.
+* A pair is a variable from the left table and a variable from the right table.
+* Cases must have *exactly equal* values in the left variable and right variable for a match to be made.
+
+**Example**:
+```{r echo=1:2}
+Grades %>% 
+  left_join(Courses, by = c(sessionID = "sessionID")) %>%
+  head(4)
+```
+
+The default value of `by=` is all variables with the same names in both tables.     
+
+This is **not reliable** unless you've checked.
+
+----
+
+## Kinds of join
+
+Different kinds of join have different answers to these questions.
+
+* What to do when there is **no match** between a left case and any right case?
+* What to do when there are **multiple matching cases** in the right table for a case in the left table?
+
+Most popular joins: `left_join()` and `inner_join()`
+
+-------
+
+## No match of a left case to a right case
+
+* `left_join()` Keep the left case and fill in the new variables with NA
+* `inner_join()` Discard the left case.
+
+Less popular joins:
+
+* `full_join()` Keep left case as well as unmatched right cases.
+* `semi_join()` Discard the left case.
+* `anti_join()` Keep the left case but discard any left case with a match in the right table
+
+------
+
+## Multiple matches of right cases to a left case
+
+`left_join()` and `inner_join()` do the same thing:
+
+* `left_join()` Keep **all combinations**.
+* `inner_join()` Keep **all combinations**.
+
+Less popular joins:
+
+* `full_join()` Keep all combinations.
+* `semi_join()` Keep just one copy of the left case.
+* `anti_join()` Discard the left case.
+
+-----
+
+## Example: Grade-point averages
+
+Here are three data tables relating student grades in courses at their college
+
+```{r echo=c(1,3,5)}
+Grades <- read.file("http://tiny.cc/mosaic/grades.csv")
+Grades %>% head(1)
+Courses <- read.file("http://tiny.cc/mosaic/courses.csv")
+Courses %>% head(1)
+GradePoint <- read.file("http://tiny.cc/mosaic/grade-to-number.csv")
+GradePoint %>% head(1)
+```
+
+----
+
+## Exercise: Which to Join?
+
+For each of these, say what tables you would need to join and what the corresponding variables will be.
+
+1. How many students in each department?
+#. What fraction of grades are below B+ in each department?
+#. What's the grade-point average (GPA) for each student?
+#. Grade-point average for each department or instructor
+
+----
+
+## Activity: Bird Species
+
+The following steps must be clearly shown in the file you submit so they can be graded as follows: 
+
+Assignment is worth a total of 10 points
+
+* [1 point] Turn in HTML with embedded .Rmd file (e.g. "DataComputing simple" template)
+* [2 points] Task 1: show number of mis-spellings in `OrdwayBirds` & number of distinct species in `OrdwaySpeciesNames`
+* [2 points] Task 2: execute join and answer questions
+* [1 points] Task 3: identify major species
+* [2 points] Task 4: include bar graph
+* [2 points] Task 4: answer questions
+
+
+## Homework  
+
+- Schedule availability (before leaving class today)
+- Submit Activity: Bird Species on Canvas by midnight Sunday
+- DC Ch 10 Exercises: 10.1, 10.2, 10.3    
+- DC chapter 8 reading quiz on Canvas   
+
+
+---
+
+[teaching](https://mdbeckman.github.io/Teaching.html) | [stat 184 home](https://mdbeckman.github.io/Teaching/AY2016-17/stat184/stat184-fall2016.html) | [syllabus](https://mdbeckman.github.io/Teaching/AY2016-17/stat184/stat184-syllabus.html) | [piazza](https://piazza.com/psu/fall2016/stat184/home) | [canvas](https://psu.instructure.com/courses/1792768)
+
