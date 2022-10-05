@@ -347,9 +347,18 @@ GradePoint %>% head(3)
 For each of these, say what tables you would need to join and what the corresponding variables will be.
 
 1. How many students in each department?
+Join Grades and Courses table. This will be a left join through the lionpathCourseID. The corresponding variables will be studentID, grade, lionpathCourseID, dept, level, sem, enrollment, instructorID
+
 2. What fraction of grades are below B+ in each department?
+Join Grades and Courses table. This will be a left join through the lionpathCourseID. The corresponding variables will be studentID, grade, lionpathCourseID, dept, level, sem, enrollment, instructorID
+
+
 3. What's the grade-point average (GPA) for each student?
+Join Grades and GradePoint tables. This will be a left join through the Grade. The corresponding variables will be studentID, grade, lionpathCourseID, and gradepoint.
+
+
 4. Grade-point average for each department or instructor
+Join Grades and course and left join
 
 
 ## Other resources 
