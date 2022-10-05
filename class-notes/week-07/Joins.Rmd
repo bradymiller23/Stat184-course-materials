@@ -2,7 +2,7 @@
 title: "Week 7: Data Table Joins"
 subtitle: "Data Computing Chapter 11"
 author: |
-        | Presenter: Olivia
+        | Presenter: Olivia Beck
         | Content credit: Matthew Beckman
 output: 
     slidy_presentation: default
@@ -19,6 +19,25 @@ library(mosaic)
 knitr::opts_chunk$set(tidy = FALSE, message = FALSE)
 options(width = 80)
 ```
+
+
+## Reminders about assignments
+
+- Remember to turn things in! 
+  - Activities have a Canvas and GitHub portions
+  - Homeworks have Canvas portion
+  - Reading Quizzes have Canvas portion
+  
+- It is good to use `esquisser` or `mplot` to generate graphs but...
+  - These functions should be run in the console, NOT the RMarkdown document itself. 
+  - If you include them in the RMarkdown document, your RNotebook will not render correctly
+  - It is good practice to comment out the `esquisser` or `mplot` line in your RMarkdown document so you remember that you used it, but it does not actually run when the document is rendering
+  
+- Several of you are missing the easy points on assignments
+  - Remember to read the entire question and answer all parts 
+  - A lot of coding questions have a coding portion and a written portion (remember to do the written portion!)
+  - Look at your RNotebook before you submit it
+    - make sure you can see the **code**, the **graphs**, and the **written explanations**
 
 ## Agenda
 
@@ -72,6 +91,9 @@ GlyphReady <- data.frame(letters = c(rep("A", 100), rep("B", 100)),
                   center = c(rep(7, 100), rep (-3, 100)))
 
 GlyphReady %>%
+  sample_n(10)
+
+GlyphReady %>%
   ggplot(aes(x = numbers)) +
   geom_histogram()+
   geom_vline(aes(xintercept = center), col = "red") +
@@ -86,6 +108,10 @@ dat1 <-  data.frame(letters = c(rep("A", 100), rep("B", 100)),
                   numbers = c(dat.A, dat.B))
 dat2 <- data.frame(letters = c("A", "B"),
                    center = c(7, -3))
+
+dat1 %>%
+  sample_n(10)
+dat2
 ```
 
 So how do we go from `dat1` and `dat2` to `Glyphform`? Joins!
@@ -333,5 +359,4 @@ For each of these, say what tables you would need to join and what the correspon
 
 A website I find very helpful: <https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti>. 
 ![](dplyrjoins.png)
-
 
